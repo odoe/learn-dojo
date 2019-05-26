@@ -1,17 +1,18 @@
 export default [
+	// {
+	// 	path: 'home',
+	// 	outlet: 'home',
+	// 	defaultRoute: true
+	// },
 	{
-		path: 'home',
-		outlet: 'home',
-		defaultRoute: true
-	},
-	{
-		path: 'blog',
+		path: '/{path}',
 		outlet: 'blog',
-		children: [
-			{
-				path: '{path}',
-				outlet: 'blog-post'
-			}
-		]
+		defaultRoute: true
+		// children: [
+		// 	{
+		// 		path: '{path}',
+		// 		outlet: 'blog-post'
+		// 	}
+		// ]
 	}
 ];
