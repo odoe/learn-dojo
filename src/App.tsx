@@ -18,11 +18,11 @@ export default class App extends WidgetBase<AppProperties> {
 					key="blog"
 					id="blog"
 					renderer={(matchDetails) => {
-						console.log('route', matchDetails);
-						if (matchDetails.isExact()) {
-							return <Blog />;
+						const { params } = matchDetails;
+						if (params.path && params.path !== '') {
+							return <Blog standalone path={params.path} />;
 						}
-						return <Blog standalone />;
+						return <Blog />;
 					}}
 				/>
 			</Layout>

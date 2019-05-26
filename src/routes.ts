@@ -5,14 +5,14 @@ export default [
 	// 	defaultRoute: true
 	// },
 	{
-		path: '/',
+		path: '/{path}',
 		outlet: 'blog',
-		defaultRoute: true,
-		children: [
-			{
-				path: '{path}',
-				outlet: 'blog-post'
-			}
-		]
+		defaultRoute: true
+		// children: [
+		// 	{
+		// 		path: '{path}',
+		// 		outlet: 'blog-post'
+		// 	}
+		// ]
 	}
 ];

@@ -18,7 +18,6 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', options);
 
 export default class BlogPost extends WidgetBase<PostProperties> {
 	protected render() {
-		console.log(this.properties);
 		let { excerpt = false, path } = this.properties;
 		if (!path.includes('.md')) {
 			path = `${path}.md`;
@@ -37,7 +36,7 @@ export default class BlogPost extends WidgetBase<PostProperties> {
 			const readMoreLink = excerpt && (
 				<Content key={post.meta.title}>
 					<Link
-						to="blog-post"
+						to="blog"
 						params={{
 							path: path.replace('posts/', '').replace('.md', '')
 						}}
@@ -49,7 +48,7 @@ export default class BlogPost extends WidgetBase<PostProperties> {
 			return (
 				<Content key={post.meta.title}>
 					<Link
-						to="blog-post"
+						to="blog"
 						params={{
 							path: path.replace('posts/', '').replace('.md', '')
 						}}

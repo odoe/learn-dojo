@@ -21,11 +21,8 @@ export default class Header extends WidgetBase<{ title: string }> {
 		return (
 			<header>
 				<Toolbar classes={extendedCSS} heading={title} collapseWidth={600}>
-					<Link to="home" classes={[ css.link ]} activeClasses={[ css.selected ]}>
+					<Link to="/" isOutlet={false} classes={[ css.link ]} activeClasses={[ css.selected ]}>
 						Home
-					</Link>
-					<Link to="blog" classes={[ css.link ]} activeClasses={[ css.selected ]}>
-						Blog
 					</Link>
 				</Toolbar>
 			</header>

@@ -7,26 +7,24 @@ import compileBlogIndex from '../blocks/compile-blog-index.block';
 import Post from '../templates/blog-post/BlogPost';
 
 import * as css from './Blog.m.css';
-import Outlet from '@dojo/framework/routing/Outlet';
+// import Outlet from '@dojo/framework/routing/Outlet';
 
-export default class Blog extends WidgetBase<{ standalone?: boolean }> {
+export default class Blog extends WidgetBase<{ standalone?: boolean; path?: string }> {
 	protected render() {
-		const { standalone = false } = this.properties;
+		const { standalone = false, path } = this.properties;
 		const blogs: any = this.meta(Block).run(compileBlogIndex)({});
-		console.log('standalone?', standalone);
 		return (
 			<div classes={[ css.root ]}>
 				{!standalone ? (
-					blogs && blogs.map((blog: any) => [ <Post path={blog.file} excerpt />, <hr /> ])
+					blogs &&
+					blogs.map((blog: any) => [
+						<Post key={blog.file} path={blog.file} excerpt />,
+						<hr key={blog.file} />
+					])
 				) : (
 					undefined
 				)}
-				<Outlet
-					id="blog-post"
-					renderer={({ params }) => {
-						return <Post path={params.path} />;
-					}}
-				/>
+				{path && path.length && <Post key={path} path={path} />}
 			</div>
 		);
 	}
