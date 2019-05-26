@@ -3,11 +3,10 @@
 		"build-time-render": {
 			"root": "root",
 			"paths": [
-				"blog/dojo-containers",
-				"blog/up-and-running-with-dojo-cli",
-				"blog/creating-a-datepicker-with-dojo",
-				"home",
-				"blog"
+				"dojo-containers",
+				"up-and-running-with-dojo-cli",
+				"creating-a-datepicker-with-dojo",
+				"."
 			]
 		}
 	},
