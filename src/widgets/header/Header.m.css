@@ -1,0 +1,34 @@
+.root {
+	flex: 1;
+	overflow: hidden;
+	color: #fff;
+	background-color: #0179cc;
+}
+
+.content {
+	color: #fff;
+	background-color: #0179cc;
+}
+
+.menu {
+	color: #fff;
+}
+
+.link:hover {
+	color: #4db3ff;
+	background-color: #ccddee;
+}
+
+.link {
+	min-width: 140px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 18px;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+.selected {
+	color: darkorange;
+}

@@ -1,0 +1,41 @@
+.root {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 120px;
+	grid-column: 1 / 6;
+	padding: 0;
+	overflow: hidden;
+}
+
+.section {
+	grid-column: 2 / auto;
+	padding: 0 9rem;
+}
+
+@media only screen and (max-width: 800px) {
+	.root {
+		padding: 0;
+	}
+	.root article img {
+		display: block;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.root article img {
+		display: block;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.root {
+		padding: 0;
+	}
+	.root article img {
+		display: block;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}

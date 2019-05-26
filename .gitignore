@@ -1,0 +1,5 @@
+node_modules/
+_build/
+output/dev/
+output/info/
+.cert/

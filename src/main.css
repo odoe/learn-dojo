@@ -1,0 +1,25 @@
+/* Put your styles and imports here */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	color: hsla(291, 0%, 18%, 0.95);
+}
+
+header {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	line-height: 1.1;
+}
+
+#root {
+	display: grid;
+	grid-template-columns: 1fr minmax(280px, 1000px) 1fr;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+	font-size: 14px;
+}

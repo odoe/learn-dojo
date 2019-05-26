@@ -1,0 +1,13 @@
+.root {
+	width: 100vw;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin: 0 -50vw 2rem;
+	background-image: url("/assets//images/learn-dojo-jumbotron.jpg");
+}
