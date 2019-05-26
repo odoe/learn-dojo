@@ -5,6 +5,10 @@ import * as css from './Hero.m.css';
 
 export default class Hero extends WidgetBase {
 	protected render() {
-		return <div classes={[ css.root ]} />;
+		return (
+			<div classes={[ css.root ]}>
+				<h3 classes={[ css.description ]}>byte by byte</h3>
+			</div>
+		);
 	}
 }

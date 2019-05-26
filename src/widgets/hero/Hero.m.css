@@ -11,3 +11,12 @@
 	margin: 0 -50vw 2rem;
 	background-image: url("/assets//images/learn-dojo-jumbotron.jpg");
 }
+
+.description {
+	margin-left: calc(5 * var(--grid-base));
+	margin-top: calc(var(--grid-base));
+	position: absolute;
+	font-size: 0.8rem;
+	top: 0;
+	color: #fff;
+}

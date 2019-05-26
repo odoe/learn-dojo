@@ -10,8 +10,9 @@
 	padding: 0 9rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
 	.root {
+		grid-column: 1 / 6;
 		padding: 0;
 	}
 	.root article img {
@@ -19,23 +20,24 @@
 		max-width: 500px;
 		margin: 0 auto;
 	}
-}
-
-@media only screen and (max-width: 1200px) {
-	.root article img {
-		display: block;
-		max-width: 500px;
-		margin: 0 auto;
+	.section {
+		grid-column: 1 / 6;
+		padding: 0 2rem;
 	}
 }
 
 @media only screen and (max-width: 480px) {
 	.root {
+		grid-column: 1 / 6;
 		padding: 0;
 	}
 	.root article img {
 		display: block;
 		max-width: 300px;
 		margin: 0 auto;
+	}
+	.section {
+		grid-column: 1 / 6;
+		padding: 0 1rem;
 	}
 }

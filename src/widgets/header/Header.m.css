@@ -2,12 +2,14 @@
 	flex: 1;
 	overflow: hidden;
 	color: #fff;
-	background-color: #0179cc;
+	/* background-color: #0179cc; */
+	background-color: #333;
 }
 
 .content {
 	color: #fff;
-	background-color: #0179cc;
+	background-color: #333;
+	/* background-color: #0179cc; */
 }
 
 .menu {

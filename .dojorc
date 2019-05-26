@@ -6,6 +6,7 @@
 				"dojo-containers",
 				"up-and-running-with-dojo-cli",
 				"creating-a-datepicker-with-dojo",
+				"web-components-with-dojo",
 				"."
 			]
 		}

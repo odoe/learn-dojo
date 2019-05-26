@@ -15,11 +15,11 @@ export default class Layout extends WidgetBase<SiteConfig> {
 		return (
 			<div classes={[ css.root ]}>
 				<Header title={title} />
-				<section classes={[ css.section ]}>
-					<Hero />
+				<Hero />
+				<main classes={[ css.section ]}>
 					{this.children}
 					<Footer {...{ author, footerLinks }} />
-				</section>
+				</main>
 			</div>
 		);
 	}
