@@ -4,6 +4,7 @@ import { tsx } from '@dojo/framework/widget-core/tsx';
 import Footer from '../widgets/footer/Footer';
 import Header from '../widgets/header/Header';
 import Hero from '../widgets/hero/Hero';
+import SignUp from '../widgets/signup/SignUp';
 
 import * as css from './Layout.m.css';
 
@@ -18,6 +19,7 @@ export default class Layout extends WidgetBase<SiteConfig> {
 				<Hero />
 				<main classes={[ css.section ]}>
 					{this.children}
+					<SignUp />
 					<Footer {...{ author, footerLinks }} />
 				</main>
 			</div>
