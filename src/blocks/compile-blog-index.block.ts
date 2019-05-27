@@ -4,7 +4,7 @@ import { readdir } from 'fs-extra';
 import { getLocalFile, getMetaData } from './utils';
 
 const CONTENT_PATH = join(__dirname, '../../posts');
-
+// https://github.com/dojo/site/blob/master/src/scripts/compile-blog-index.block.ts
 export default async function(options: any) {
 	const files = await readdir(CONTENT_PATH);
 	const blogs: any[] = [];
@@ -14,10 +14,12 @@ export default async function(options: any) {
 		const meta = getMetaData(content);
 
 		blogs.push({
+			sortDate: new Date(`${meta.date}`),
 			file,
 			content,
 			meta
 		});
 	}
-	return blogs.sort((a, b) => (new Date(a.date) > new Date(b.date) ? 1 : -1));
+
+	return blogs.sort((a, b) => b.sortDate.getTime() - a.sortDate.getTime());
 }

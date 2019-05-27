@@ -4,6 +4,7 @@ date: 2018-09-10
 author: Rene Rubalcava
 description: We walk through the steps needed to create a custom DatePicker using Dojo.
 tags: javascript, dojo, typescript, webdev
+cover_image: /assets/blog/create-a-datepicker-with-dojo.jpg
 ---
 
 
@@ -319,5 +320,3 @@ You can see the source code for the complete application on [github](https://git
 I also want to point out that you can try out some Dojo in [codesandbox](https://codesandbox.io), although I have had some issues with `i18n` in the sandbox, which is why this sample isn't provided there.
 
 Now you can go forward and make some awesome widgets of your own!
-
-Be sure to [subscribe to the newsletter](https://learn-dojo.com/sign-up/) at learn-dojo.com and stay up to date with the latest content!

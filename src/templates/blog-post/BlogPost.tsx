@@ -4,17 +4,16 @@ import Link from '@dojo/framework/routing/Link';
 
 import compileBlogPost from '../../blocks/compile-blog-post.block';
 
-// import * as css from './BlogPost.m.css';
 import Block from '@dojo/framework/widget-core/meta/Block';
 import Content from '../../widgets/content/Content';
+import Card from '../../widgets/card/Card';
+
+import { dateFormatter } from '../../utils/formatter';
 
 export interface PostProperties {
 	excerpt?: boolean;
 	path: string;
 }
-
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-const dateFormatter = new Intl.DateTimeFormat('en-US', options);
 
 export default class BlogPost extends WidgetBase<PostProperties> {
 	protected render() {
@@ -26,37 +25,25 @@ export default class BlogPost extends WidgetBase<PostProperties> {
 			path
 		});
 		if (post) {
-			const date = dateFormatter.format(new Date(post.meta.date));
-			const postContent = [
-				<p>
-					{post.meta.author} | {date}
-				</p>,
-				excerpt ? post.meta.description : post.content
-			];
-			const readMoreLink = excerpt && (
-				<Content key={post.meta.title}>
-					<Link
-						to="blog"
-						params={{
-							path: path.replace('posts/', '').replace('.md', '')
-						}}
-					>
-						READ MORE
-					</Link>
-				</Content>
-			);
+			const date = dateFormatter(new Date(post.meta.date));
+			if (excerpt) {
+				return <Card path={path} {...post.meta} />;
+			}
 			return (
 				<Content key={post.meta.title}>
+					{!excerpt && <img src={post.meta.cover_image} />}
 					<Link
 						to="blog"
 						params={{
 							path: path.replace('posts/', '').replace('.md', '')
 						}}
 					>
-						{post.meta.title}
+						<h2>{post.meta.title}</h2>
 					</Link>
-					{postContent}
-					{readMoreLink}
+					<p>
+						{post.meta.author} | {date}
+					</p>
+					{post.content}
 				</Content>
 			);
 		}

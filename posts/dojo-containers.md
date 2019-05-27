@@ -4,6 +4,7 @@ date: 2018-10-15
 author: Rene Rubalcava
 description: Learn to use Dojo containers to manage state in your apps!
 tags: javascript, dojo, webdev
+cover_image: /assets/blog/dojo-containers.jpg
 ---
 
 Once you start building applications that begin to compose multiple widgets and you are trying to manage state across those widgets, you might want to start looking at [Dojo Containers](https://github.com/dojo/framework/blob/master/src/widget-core/README.md#containers--injectors). Containers allow you to inject values into widget properties, without having to import state directly into your widget.
@@ -124,6 +125,3 @@ You could create containers for each individual widget in your application and m
 
 You can see a sample of this application above on [CodeSandbox](https://codesandbox.io/embed/j31zl4mwvy).
 
-!(https://codesandbox.io/embed/j31zl4mwvy)
-
-Be sure to [subscribe to the newsletter](https://learn-dojo.com/sign-up/) and stay up to date with the latest content!

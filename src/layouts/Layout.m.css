@@ -38,6 +38,6 @@
 	}
 	.section {
 		grid-column: 1 / 6;
-		padding: 0 1rem;
+		padding: 0;
 	}
 }

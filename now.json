@@ -1,0 +1,11 @@
+{
+	"version": 2,
+	"name": "learn-dojo",
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@now/static-build",
+			"config": { "distDir": "output/dist" }
+		}
+	]
+}

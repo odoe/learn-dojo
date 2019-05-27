@@ -4,6 +4,7 @@ date: 2018-09-22
 author: Rene Rubalcava
 description: How to export Dojo widgets to Web Components
 tags: javascript, dojo, web components, webdev
+cover_image: /assets/blog/web-components-with-dojo.jpg
 ---
 
 We previously saw how we can create a [custom date picker](https://dev.to/odoenet/creating-a-datepicker-with-dojo-lbh) with [Dojo](https://dojo.io/). If building custom widgets with Dojo wasn't cool enough, one of the features that Dojo provides that set it apart is the ability to export your custom widgets to [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
@@ -119,6 +120,5 @@ You can find the source code [here](https://github.com/odoe/dojo-datepicker-web-
 
 And there you go, we just exported a Dojo widget that we previously built into a reusable web component. Try it out with your own components and feel confident that you can build awesome widgets that you can use anywhere!
 
-Be sure to [subscribe to the newsletter](https://learn-dojo.com/sign-up/) at learn-dojo.com and stay up to date with the latest content!
 
 
