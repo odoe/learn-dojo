@@ -36,18 +36,6 @@
 						"sizes": [ 128, 256, 512 ]
 					}
 				]
-			},
-			"serviceWorker": {
-				"clientsClaim": true,
-				"routes": [
-					{
-						"urlPattern": "https://learn-dojo.com",
-						"strategy": "networkFirst",
-						"expiration": {
-							"maxEntries": 25
-						}
-					}
-				]
 			}
 		}
 	},
