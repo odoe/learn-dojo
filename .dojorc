@@ -25,9 +25,9 @@
 		},
 		"pwa": {
 			"manifest": {
-				"name": "dojo-esri-loader",
-				"short_name": "dojo-esri-loader",
-				"description": "dojo-esri-loader",
+				"name": "learn-dojo",
+				"short_name": "learn-dojo",
+				"description": "learn dojo",
 				"background_color": "#ffffff",
 				"theme_color": "#009dff",
 				"icons": [

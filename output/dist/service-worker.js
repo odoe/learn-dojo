@@ -15,7 +15,7 @@ importScripts("workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v3.6.3"});
 
 importScripts(
-  "precache-manifest.12b010d962c06705606a2bcd8377a133.js"
+  "precache-manifest.2054e5a540e7aa5b549b709d48412c99.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "btr-site"});
