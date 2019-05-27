@@ -3,3 +3,4 @@ _build/
 output/dev/
 output/info/
 .cert/
+.netlify/
