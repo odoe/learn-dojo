@@ -18,10 +18,10 @@ export default class Layout extends WidgetBase<SiteConfig> {
 				<Header title={title} />
 				<Hero />
 				<main classes={[ css.section ]}>
-					{this.children}
-					<SignUp />
-					<Footer {...{ author, footerLinks }} />
-				</main>
+          {this.children}
+        </main>
+        <SignUp />
+        <Footer {...{ author, footerLinks }} />
 			</div>
 		);
 	}

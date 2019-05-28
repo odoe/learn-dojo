@@ -15,9 +15,11 @@ import siteConfig from './site-config';
 import App from './App';
 
 const registry = new Registry();
-registerRouterInjector(routes, registry, { HistoryManager: StateHistory });
+const router = registerRouterInjector(routes, registry, { HistoryManager: StateHistory });
 registerThemeInjector(dojo, registry);
 
 const r = renderer(() => <App siteConfig={siteConfig} />);
 const domNode = document.getElementById('root') as HTMLElement;
 r.mount({ registry, domNode });
+
+router.on('nav', () => scroll(0, 0));

@@ -5,6 +5,7 @@
 			"paths": [
 				"build-time-rendering-in-dojo",
 				"building-a-simple-app-in-dojo",
+        "building-static-site-with-dojo",
 				"creating-a-datepicker-with-dojo",
 				"dojo-cli-template-app",
 				"dojo-containers",
