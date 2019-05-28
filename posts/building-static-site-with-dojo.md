@@ -188,9 +188,9 @@ This means that even if someone is on a slow connection or the javascript doesn'
 
 ## Deployment
 
-Since my site doesn't require making any API calls or rely on a server to do any server side rendering, it's fairly easy to deploy to any number of your favorite hosting services. For the record, I tried to deploy to [zeit](https://zeit.co/) and [netlify](https://www.netlify.com/) and they both appeared to work great at first. However, it looks like the subdirectories of my `dist` directory would not deploy, so links to pages other than the main page would not work. If I linked to a page from the main page, dojo routing worked fine, but when linked directly. I'm sure I just did not configure something correctly, but it wasn't clear to me what I didn't do right.
+Since my site doesn't require making any API calls or rely on a server to do any server side rendering, it's fairly easy to deploy to any number of your favorite hosting services. For the record, I tried to deploy to [zeit](https://zeit.co/) and [netlify](https://www.netlify.com/) and they both appeared to work great at first. However, it looks like the subdirectories of my `dist` directory would not deploy, so links to pages other than the main page would not work. If I linked to a page from the main page, dojo routing worked fine, but not when using the URL. I'm sure I just did not configure something correctly, but it wasn't clear to me _what_ I didn't do right.
 
-So at the end of the day, I deployed to [aws s3](https://aws.amazon.com/s3/). Although, s3 configuration isn't exactly _simple_, I know enough to drag and drop the folders over and I could even said up a pipeline from github. I'll probably need to add a `published` tag to my posts like [dev.to](https://dev.to/) does so I an push posts in progress to github without deploying them with the rest of the site.
+So at the end of the day, I deployed to [aws s3](https://aws.amazon.com/s3/). Although, s3 configuration isn't exactly _simple_, I know enough to drag and drop the folders over and I could even set up a pipeline from github. I'll probably need to add a `published` tag to my posts like [dev.to](https://dev.to/) does so I an push posts in progress to github without deploying them with the rest of the site.
 
 There is plenty more I want to do with this project going forward!
 
