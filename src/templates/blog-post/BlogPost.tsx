@@ -30,21 +30,23 @@ export default class BlogPost extends WidgetBase<PostProperties> {
 				return <Card path={path} {...post.meta} />;
 			}
 			return (
-				<Content key={post.meta.title}>
-					{!excerpt && <img src={post.meta.cover_image} />}
-					<Link
-						to="blog"
-						params={{
-							path: path.replace('posts/', '').replace('.md', '')
-						}}
-					>
-						<h2>{post.meta.title}</h2>
-					</Link>
-					<p>
-						{post.meta.author} | {date}
-					</p>
-					{post.content}
-				</Content>
+        <section>
+          {!excerpt && <img src={post.meta.cover_image} />}
+          <Content key={post.meta.title}>
+            <Link
+              to="blog"
+              params={{
+                path: path.replace('posts/', '').replace('.md', '')
+              }}
+            >
+              <h2>{post.meta.title}</h2>
+            </Link>
+            <p>
+              {post.meta.author} | {date}
+            </p>
+            {post.content}
+          </Content>
+        </section>
 			);
 		}
 	}

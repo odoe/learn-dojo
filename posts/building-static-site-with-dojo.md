@@ -35,7 +35,7 @@ export const toVNodes = (content: string) => {
 };
 ```
 
-This block function uses `unified` parse a markdown file. The result of parsing this file is a [markdown abstract tree](https://github.com/syntax-tree/mdast) that is then passed through a series of remark plugins to transform that markdown into a product that we can then parse to HTML with [rehype](https://github.com/rehypejs/rehype) and some other rehype plugins. Once that is done, we can transform this product to hyperscript using [hast-to-hyperscript](https://github.com/syntax-tree/hast-to-hyperscript) using the built in dojo virtual dom tooling to produce the needed nodes.
+This block function uses `unified` to parse a markdown file. The result of parsing this file is a [markdown abstract tree](https://github.com/syntax-tree/mdast) that is then passed through a series of remark plugins to transform that markdown into a product that we can then parse to HTML with [rehype](https://github.com/rehypejs/rehype) and some other rehype plugins. Once that is done, we can transform this product to hyperscript using [hast-to-hyperscript](https://github.com/syntax-tree/hast-to-hyperscript) using the built in dojo virtual dom tooling to produce the needed nodes.
 
 ## Routing
 
@@ -95,11 +95,11 @@ I'm using the metadata from each blog post to create these cards. I'm using a lo
 
 The result is a card that looks similar to this.
 
-![](/assets/blog/dojo-blog-card.png)
+![dojo blog card](/assets/blog/dojo-blog-card.png)
 
 ## Templates
 
-Blog posts are represented as templates. In this case they can render in these card styles for the main page or as the entire blog post. The blog post template looks like this.
+Blog posts are represented as templates. In this case they can render in a card style for the main page or as the entire blog post. The blog post template looks like this.
 
 ```tsx
 export default class BlogPost extends WidgetBase<PostProperties> {
@@ -141,7 +141,7 @@ export default class BlogPost extends WidgetBase<PostProperties> {
 }
 ```
 
-The results of this looks just like this blog.
+_The results of this looks just like this blog!_
 
 ## Building
 
@@ -182,7 +182,7 @@ I'm planning on automating the updates of the `.dojorc` with a script that I can
 
 Once it's been built, the result is a static website with subdirectories to each page I've built.
 
-![](/assets/blog/dojo-btr-built.png)
+![dojo buil time render result](/assets/blog/dojo-btr-built.png)
 
 This means that even if someone is on a slow connection or the javascript doesn't load correctly, my site should still be visible, including the routes of my site.
 
@@ -200,7 +200,7 @@ My blog is not a full blown web application, but that doesn't mean you can't tak
 
 ## Try it yourself
 
-If you want to try this dojo static site generator out yourself, you can quickly get started the following command.
+If you want to try this dojo static site generator out yourself, you can quickly get started with the following command.
 
 ```bash
 npx degit odoe/btr-site my-awesome-site

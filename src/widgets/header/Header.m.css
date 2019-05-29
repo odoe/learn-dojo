@@ -2,35 +2,26 @@
 	flex: 1;
 	overflow: hidden;
 	color: #fff;
-	/* background-color: #0179cc; */
 	background-color: #333;
+	padding: 1rem;
 }
 
-.content {
-	color: #fff;
-	background-color: #333;
-	/* background-color: #0179cc; */
-}
-
-.menu {
-	color: #fff;
+.title {
+	font-size: 20px;
+	margin: 0;
+	font-weight: 400;
 }
 
 .link:hover {
-	color: #4db3ff;
-	background-color: #ccddee;
+	color: #fff;
+	background-color: #333;
 }
 
 .link {
 	min-width: 140px;
 	text-align: center;
-	text-transform: uppercase;
 	text-decoration: none;
 	padding: 18px;
 	color: #fff;
 	box-sizing: border-box;
-}
-
-.selected {
-	color: darkorange;
 }

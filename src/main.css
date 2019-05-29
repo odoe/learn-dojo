@@ -1,6 +1,8 @@
 /* Put your styles and imports here */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+@import 'typography.css';
+
 body {
 	margin: 0;
 	padding: 0;
@@ -19,7 +21,21 @@ header {
 	grid-template-columns: 1fr minmax(280px, 1000px) 1fr;
 }
 
+article img {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 code[class*=language-],
 pre[class*=language-] {
 	font-size: 14px;
+}
+
+@media only screen and (max-width: 480px) {
+	article img {
+		display: block;
+		max-width: 300px;
+		margin: 0 auto;
+	}
 }

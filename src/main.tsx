@@ -8,8 +8,6 @@ import { StateHistory } from '@dojo/framework/routing/history/StateHistory';
 import dojo from '@dojo/themes/dojo';
 import '@dojo/themes/dojo/index.css';
 
-import './typography';
-
 import routes from './routes';
 import siteConfig from './site-config';
 import App from './App';
