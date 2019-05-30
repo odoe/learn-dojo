@@ -14,14 +14,12 @@ export default class Layout extends WidgetBase<SiteConfig> {
 	protected render() {
 		const { title, description, author, footerLinks } = this.properties;
 		return (
-			<div classes={[ css.root ]}>
+			<div classes={[css.root]}>
 				<Header title={title} />
-				<Hero description={description}/>
-				<main classes={[ css.section ]}>
-          {this.children}
-        </main>
-        <SignUp />
-        <Footer {...{ author, footerLinks }} />
+				<Hero description={description} />
+				<main classes={[css.section]}>{this.children}</main>
+				<SignUp />
+				<Footer {...{ author, footerLinks }} />
 			</div>
 		);
 	}
