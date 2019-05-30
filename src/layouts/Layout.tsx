@@ -12,11 +12,11 @@ import { SiteConfig } from '../interfaces';
 
 export default class Layout extends WidgetBase<SiteConfig> {
 	protected render() {
-		const { title, author, footerLinks } = this.properties;
+		const { title, description, author, footerLinks } = this.properties;
 		return (
 			<div classes={[ css.root ]}>
 				<Header title={title} />
-				<Hero />
+				<Hero description={description}/>
 				<main classes={[ css.section ]}>
           {this.children}
         </main>

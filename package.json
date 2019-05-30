@@ -37,5 +37,12 @@
 		"remark-rehype": "^4.0.0",
 		"typescript": "~3.4.5",
 		"unified": "^7.1.0"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"tabWidth": 4,
+		"useTabs": true,
+		"printWidth": 120,
+		"arrowParens": "always"
 	}
 }

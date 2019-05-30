@@ -5,7 +5,7 @@ import Link from '@dojo/framework/routing/Link';
 import compileBlogPost from '../../blocks/compile-blog-post.block';
 
 import Block from '@dojo/framework/widget-core/meta/Block';
-import Content from '../../widgets/content/Content';
+import Article from '../../widgets/article/Article';
 import Card from '../../widgets/card/Card';
 
 import { dateFormatter } from '../../utils/formatter';
@@ -32,7 +32,7 @@ export default class BlogPost extends WidgetBase<PostProperties> {
 			return (
         <section>
           {!excerpt && <img src={post.meta.cover_image} />}
-          <Content key={post.meta.title}>
+          <Article key={post.meta.title}>
             <Link
               to="blog"
               params={{
@@ -45,7 +45,7 @@ export default class BlogPost extends WidgetBase<PostProperties> {
               {post.meta.author} | {date}
             </p>
             {post.content}
-          </Content>
+          </Article>
         </section>
 			);
 		}

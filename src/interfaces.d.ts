@@ -4,7 +4,8 @@ interface FooterLink {
 }
 
 export interface SiteConfig {
-	title: string;
+  title: string;
+  description: string;
 	author: string;
 	footerLinks: FooterLink[];
 }

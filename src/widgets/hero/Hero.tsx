@@ -3,11 +3,12 @@ import { tsx } from '@dojo/framework/widget-core/tsx';
 
 import * as css from './Hero.m.css';
 
-export default class Hero extends WidgetBase {
+export default class Hero extends WidgetBase<{ description: string }> {
 	protected render() {
+		const { description } = this.properties;
 		return (
-			<div classes={[ css.root ]}>
-				<h3 classes={[ css.description ]}>byte by byte</h3>
+			<div classes={[css.root]}>
+				<h3 classes={[css.description]}>{description}</h3>
 			</div>
 		);
 	}

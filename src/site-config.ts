@@ -2,7 +2,8 @@ import { SiteConfig } from './interfaces';
 
 const siteConfig: SiteConfig = {
 	title: 'learn dojo',
-	author: 'odoenet',
+  author: 'odoenet',
+  description: 'byte by byte',
 	footerLinks: [
 		{
 			href: 'https://github.com/odoe/learn-dojo',
