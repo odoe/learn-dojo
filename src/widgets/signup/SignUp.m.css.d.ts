@@ -9,3 +9,4 @@ export const gdprcheck: string;
 export const checkbox: string;
 export const info: string;
 export const input: string;
+export const fieldset: string;

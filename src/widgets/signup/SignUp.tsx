@@ -28,7 +28,7 @@ export default class SignUp extends WidgetBase {
 									<div>
 										<label>Marketing Permissions</label>
 										<p>Please select all the ways you would like to hear from odoenet:</p>
-										<fieldset name="interestgroup_field">
+										<fieldset classes={[ css.fieldset ]} name="interestgroup_field">
 											<label classes={[ css.gdprcheck ]} for="gdpr_7561">
 												<input
 													type="checkbox"

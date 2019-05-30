@@ -73,6 +73,6 @@
 	transition: border-color .3s ease-out;
 }
 
-.root fieldset {
+.fieldset {
 	border: 0;
 }
