@@ -11,7 +11,7 @@ import { AppProperties } from './interfaces';
 export default class App extends WidgetBase<AppProperties> {
 	protected render() {
 		return (
-			<Layout {...this.properties.siteConfig}>
+			<Layout {...this.properties.siteMeta}>
 				<Outlet
 					key="blog"
 					id="blog"

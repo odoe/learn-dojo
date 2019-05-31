@@ -8,15 +8,14 @@ import { StateHistory } from '@dojo/framework/routing/history/StateHistory';
 import dojo from '@dojo/themes/dojo';
 import '@dojo/themes/dojo/index.css';
 
-import routes from './routes';
-import siteConfig from './site-config';
+import { meta, routes } from './site-config';
 import App from './App';
 
 const registry = new Registry();
 const router = registerRouterInjector(routes, registry, { HistoryManager: StateHistory });
 registerThemeInjector(dojo, registry);
 
-const r = renderer(() => <App siteConfig={siteConfig} />);
+const r = renderer(() => <App siteMeta={meta} />);
 const domNode = document.getElementById('root') as HTMLElement;
 r.mount({ registry, domNode });
 

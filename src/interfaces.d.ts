@@ -3,13 +3,12 @@ interface FooterLink {
 	text: string;
 }
 
-export interface SiteConfig {
-  title: string;
-  description: string;
+export interface SiteMeta {
+	title: string;
+	description: string;
 	author: string;
 	footerLinks: FooterLink[];
 }
-
 export interface AppProperties {
-	siteConfig: SiteConfig;
+	siteMeta: SiteMeta;
 }

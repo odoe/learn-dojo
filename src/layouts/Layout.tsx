@@ -8,16 +8,16 @@ import SignUp from '../widgets/signup/SignUp';
 
 import * as css from './Layout.m.css';
 
-import { SiteConfig } from '../interfaces';
+import { SiteMeta } from '../interfaces';
 
-export default class Layout extends WidgetBase<SiteConfig> {
+export default class Layout extends WidgetBase<SiteMeta> {
 	protected render() {
 		const { title, description, author, footerLinks } = this.properties;
 		return (
-			<div classes={[css.root]}>
+			<div classes={[ css.root ]}>
 				<Header title={title} />
 				<Hero description={description} />
-				<main classes={[css.section]}>{this.children}</main>
+				<main classes={[ css.section ]}>{this.children}</main>
 				<SignUp />
 				<Footer {...{ author, footerLinks }} />
 			</div>

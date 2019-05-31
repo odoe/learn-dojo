@@ -1,6 +1,7 @@
-import { SiteConfig } from './interfaces';
+import { SiteMeta } from './interfaces';
+import { RouteConfig } from '@dojo/framework/routing/interfaces';
 
-const siteConfig: SiteConfig = {
+export const meta: SiteMeta = {
 	title: 'learn dojo',
 	author: 'odoenet',
 	description: 'byte by byte',
@@ -16,4 +17,10 @@ const siteConfig: SiteConfig = {
 	]
 };
 
-export default siteConfig;
+export const routes: RouteConfig[] = [
+	{
+		path: '/{path}',
+		outlet: 'blog',
+		defaultRoute: true
+	}
+];
