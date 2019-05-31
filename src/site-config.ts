@@ -24,3 +24,18 @@ export const routes: RouteConfig[] = [
 		defaultRoute: true
 	}
 ];
+
+// -------------------------------------
+// Plugins for static site generation
+// -------------------------------------
+
+// remark plugins with options
+export const remarkPlugins = [
+	{
+		resolve: 'remark-external-links',
+		options: { target: '_blank', rel: ['nofollow'] }
+	}
+];
+
+// rehype plugins with options
+export const rehypePlugins = ['@mapbox/rehype-prism', 'rehype-slug'];

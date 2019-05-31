@@ -5,14 +5,12 @@ const unified = require('unified');
 const markdown = require('remark-parse');
 const remark2rehype = require('remark-rehype');
 const toH = require('hast-to-hyperscript');
-const slug = require('rehype-slug');
 const frontmatter = require('remark-frontmatter');
 const parseFrontmatter = require('remark-parse-yaml');
-const rehypePrism = require('@mapbox/rehype-prism');
-const externalLinks = require('remark-external-links');
-const remarkIframes = require('remark-iframes');
 
 const { v } = require('@dojo/framework/widget-core/d');
+
+const { remarkPlugins, rehypePlugins } = require('../site-config');
 
 // ---------------------------------------------------------------------------------------
 // Based on https://github.com/dojo/site/blob/master/src/scripts/compile.ts
@@ -26,20 +24,29 @@ export const getLocalFile = async (path: string) => {
 // Converts markdown to VNodes in hyperscript
 export const toVNodes = (content: string) => {
 	let counter = 0;
-	const pipeline = unified()
+	let pipeline = unified()
 		.use(markdown as any, { commonmark: true })
-		.use(remarkIframes, {
-			'codesandbox.io': {
-				tag: 'iframe',
-				width: '100%',
-				height: 500
-			}
-		})
-		.use(externalLinks, { target: '_blank', rel: [ 'nofollow' ] })
-		.use(frontmatter, 'yaml')
-		.use(remark2rehype)
-		.use(slug)
-		.use(rehypePrism);
+		.use(frontmatter, 'yaml');
+
+	// markdown plugins
+	remarkPlugins.forEach((plugin: any) => {
+		pipeline =
+			typeof plugin === 'string'
+				? pipeline.use(require(plugin))
+				: pipeline.use(require(plugin.resolve), plugin.options);
+	});
+
+	// convert rehype
+	pipeline = pipeline.use(remark2rehype);
+
+	// rehype plugins
+
+	rehypePlugins.forEach((plugin: any) => {
+		pipeline =
+			typeof plugin === 'string'
+				? pipeline.use(require(plugin))
+				: pipeline.use(require(plugin.resolve), plugin.options);
+	});
 
 	const nodes = pipeline.parse(content);
 	const result = pipeline.runSync(nodes);
