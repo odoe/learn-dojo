@@ -179,7 +179,7 @@ export class ApolloProvider extends WidgetBase<{ client: any }> {
 }
 ```
 
-What this _naieve_ `ApolloProvider` does is iterates over the `children` of the widget and injects the `client` property into each one. I'm sure the `react-apollo` implementation does much more, but I'm not going to argue with what works.
+What this _naive_ `ApolloProvider` does is iterates over the `children` of the widget and injects the `client` property into each one. I'm sure the `react-apollo` implementation does much more, but I'm not going to argue with what works.
 
 Now that I have my provider, I can start to tie it all together.
 
