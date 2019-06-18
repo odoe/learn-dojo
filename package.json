@@ -5,8 +5,6 @@
 		"dev": "dojo build --mode dev --watch file --serve",
 		"build": "dojo build --mode dist",
 		"build:dev": "dojo build --mode dev",
-		"now-build": "npm run build && mv ./output/dist /public",
-		"now-dev": "dojo build --mode dev --watch file",
 		"test": "dojo test",
 		"test:unit": "dojo build --mode unit && dojo test --unit --config local",
 		"test:functional": "dojo build --mode functional && dojo test --functional --config local",
