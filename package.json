@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "dojo build --mode dev --watch file --serve",
-		"build": "dojo build --mode dist",
+		"dojorc": "node ./scripts/prebuild.js",
+		"build": "npm run dojorc && dojo build --mode dist",
 		"build:dev": "dojo build --mode dev",
 		"test": "dojo test",
 		"test:unit": "dojo build --mode unit && dojo test --unit --config local",
