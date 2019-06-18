@@ -47,7 +47,7 @@ import { add } from "@dojo/framework/stores/state/operations";
 
 const commandFactory = createCommandFactory<{
   client: any; // this will be the apollo client
-  data: any; // this will be 
+  data: any; // this will be graphql result
   loaded: boolean; // keep track if the data has been loaded yet
 }>();
 
