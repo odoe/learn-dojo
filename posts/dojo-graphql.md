@@ -155,9 +155,9 @@ export class MyWidget extends WidgetBase<{ client: any }> {
 
 At this point you might be asking yourself, _How do I pass a client to a widget that uses this?_
 
-Good question. Technically, you could create the client in your Widget module and provide it. But that seems kind of icky to bind backend concerns into my UI code. The way `react-apollo` does is by providing an `<ApolloProvider>` that you can pass a `client` as a property and then wrap your application components with and they will have access to the Apollo client to pass to the `Query` higher order component.
+Good question. Technically, you could create the client in your Widget module and provide it to `<Query>`. But that seems kind of icky to bind backend concerns into my UI code. The way `react-apollo` does this is by providing an `<ApolloProvider>` that you can give a `client` and then wrap your application components with it. These components will have access to the Apollo `client` to give to the `Query` higher order component.
 
-It basically looks like that `<ApolloProvider>` _provides_ its `client` property to child widgets. I can do that.
+It basically looks like the `<ApolloProvider>` _provides_ its `client` property to child widgets. _I can do that_.
 
 ```tsx
 // src/providers/ApolloProvider.tsx
