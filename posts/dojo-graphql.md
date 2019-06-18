@@ -27,9 +27,9 @@ The query is _JSON-like_, but it's not JSON. You can learn more about GraphQL on
 
 [Apollo](https://github.com/apollographql/apollo-client) provides a client API you can use to work with GraphQL. It saves you some work of writing your own POST requests, so I highly recommend you learn it. Apollo provides libraries to integrate with Angular and React, but so far not one for Dojo. But that's ok, because you can use the Apollo Client to build your own GraphQL integration.
 
-Looking at [react-apollo](https://github.com/apollographql/react-apollo), they have an `ApolloProvider` that you can wrap application in to provide the apollo client to components and those components use a `Query` higher order component to pass the query to the client and then provide the result.
+Looking at [react-apollo](https://github.com/apollographql/react-apollo), they have an `ApolloProvider` that you can use to wrap components of your application. This provides the Apollo client to components. Those components can then use a `Query` higher order component to pass the query and client and thus display the result.
 
-How hard can that be?
+_How hard can that be?_
 
 ## Trust the Process
 
