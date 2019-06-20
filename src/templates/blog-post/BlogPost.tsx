@@ -42,7 +42,7 @@ export default class BlogPost extends WidgetBase<PostProperties> {
               <h2>{post.meta.title}</h2>
             </Link>
             <p>
-              {post.meta.author} | {date}
+              {`${post.meta.author} | ${date}`}
             </p>
             {post.content}
           </Article>
