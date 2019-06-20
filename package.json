@@ -2,8 +2,9 @@
 	"name": "learn-dojo",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "dojo build --mode dev --watch file --serve",
-		"dojorc": "node ./scripts/prebuild.js",
+    "dev": "dojo build --mode dev --watch file --serve",
+    "deploy": "aws s3 rm s3://learn-dojo.com --recursive && aws s3 sync output/dist s3://learn-dojo.com",
+    "dojorc": "node ./scripts/prebuild.js",
 		"build": "npm run dojorc && dojo build --mode dist",
 		"build:dev": "dojo build --mode dev",
 		"test": "dojo test",
