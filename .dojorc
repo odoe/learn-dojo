@@ -11,6 +11,7 @@
         "dojo-containers",
         "dojo-from-the-blocks",
         "dojo-graphql",
+        "dojo-process-middleware",
         "intro-to-the-dojo-registry",
         "intro-to-the-dojo-router",
         "maintain-state-with-dojo-stores",
