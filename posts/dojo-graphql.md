@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How you can integrate GraphQL into your Dojo applications with Apollo and Dojo containers
 tags: javascript, dojo, webdev, graphql, dojo5
 cover_image: /assets/blog/dojo-graphql.jpg
+published: true
 ---
 
 [GraphQL](https://graphql.org/) has grown in popularity over the past couple of years. Where GraphQL shines is in its descriptive nature of querying data.

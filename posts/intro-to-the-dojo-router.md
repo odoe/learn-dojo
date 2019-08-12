@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: An Introduction to using the Dojo Router for scalable apps
 tags: javascript, typescript, dojo, webdev
 cover_image: /assets/blog/intro-to-the-dojo-router.jpg
+published: true
 ---
 
 

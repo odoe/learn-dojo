@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: Get started with the @dojo/cli to build your applications!
 tags: javascript, dojo, typescript, webdev
 cover_image: /assets/blog/up-and-running-with-dojo-cli.jpg
+published: true
 ---
 
 If you haven't heard, [dojo](https://dojo.io/) has gotten an upgrade! The latest version of dojo has some pretty awesome features, not just to build widgets, but it also includes a robust [i18n](https://dojo.io/docs/index.html#doc--dojo__framework__v3_0_0__src__i18n__README_md) package for your internationalization needs, a nice selection of [out-of-the-box widgets](https://dojo.io/tutorials/005_form_widgets/) and a pretty nice way to [theme your applications](https://dojo.io/tutorials/007_theming/).

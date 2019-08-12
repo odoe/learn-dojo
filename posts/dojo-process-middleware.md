@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How you can inject yourself into the Dojo process, juggle your data, and manage state updates
 tags: javascript, web development, dojo, dojo5
 cover_image: /assets/blog/dojo-process-middleware.jpg
+published: true
 ---
 
 We previously looked at how you can manage state in Dojo with [processes and stores](https://learn-dojo.com/maintain-state-with-dojo-stores). This isn't only a flexible way you can manage state in your applications, but it provides some hooks for you to be able to stick your nose into your applications business.

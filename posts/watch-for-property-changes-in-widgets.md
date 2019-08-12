@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: Use the @watch decorator in Dojo to watch for property changes in widgets
 tags: javascript, dojo, decorators
 cover_image: /assets/blog/watch-for-property-changes-in-widgets.jpg
+published: true
 ---
 
 We've seen how you can manage more complex state in your Dojo applications with [Containers](https://learn-dojo.com/dojo-containers/), but with the [release of Dojo 4](https://dojo.io/blog/2018/10/15/2018-10-15-Version-4-Dojo/) we now have access to a new `@watch` decorator. This very useful for managing the internal state of your widgets, because you no longer have to concern yourself with having to call a widgets `invalidate()` method if you don't want to. For example, let's say that I want to have a simple clock widget in my application that is just going to display the current time. For demo purposes, I'll display the time up to the second. I can create a `Clock` widget that will do exactly that.

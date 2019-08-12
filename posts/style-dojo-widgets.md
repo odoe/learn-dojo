@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How to style the out-of-the-box Dojo widgets
 tags: javascript,dojo,webdev
 cover_image: /assets/blog/style-dojo-widgets.jpg
+published: true
 ---
 
 There's an entire Dojo tutorial on [creating custom themes](https://dojo.io/tutorials/007_theming/), and if you look at any of the guides on creating widgets you will learn how to create css modules to use with your widgets and your applications.

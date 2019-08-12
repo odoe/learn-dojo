@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How to use the testing tools of the Dojo framework
 tags: javascript, dojo, tdd, testing
 cover_image: /assets/blog/testing-with-dojo.jpg
+published: true
 ---
 
 When you use the [Dojo cli](https://github.com/dojo/cli) to create an application, it comes with a full test framework for you to use. If like me, you aren't as diligent with your tests as you maybe you could be, that's ok, there's no testing police that will give you a citation, _only your own shame when you try to track down how you broke some feature after some updates you made_. I kid, I kid. But, it is a good idea to have some tests written to make sure core features of your application don't break as you write new code.

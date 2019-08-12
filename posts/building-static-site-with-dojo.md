@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: We'll look at how you can use dojo as a static site generator
 tags: javascript, dojo, typescript, webdev
 cover_image: /assets/blog/building-static-site-with-dojo.jpg
+published: true
 ---
 
 We've seen how you can use [dojo blocks](https://learn-dojo.com/dojo-from-the-blocks) with [build-time-rendering](https://learn-dojo.com/build-time-rendering-in-dojo) to create static web pages. This is pretty powerful, because it means you _could_ build an entire website without having to back with API and database calls. Of course, this isn't ideal web applications that require dynamic data or handle authorization, but it is ideal for situations where the content is fairly static, like documentation or [this blog](https://github.com/odoe/learn-dojo)! This is very much what something like [gatsby](https://www.gatsbyjs.org/) is for. All the pieces to build a static site generator are there in dojo, you just need to put them together.

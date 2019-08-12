@@ -30,11 +30,13 @@ export default class Footer extends WidgetBase<FooterProperties> {
 		const name = has('build-time-render') ? author : null;
 		const links = createLinks(footerLinks);
 		return (
-			<footer key="footer" classes={[ css.root ]}>
+			<footer key="footer" classes={[css.root]}>
 				<span>&copy; 2019 {name}</span>
 				<br />
 				{links}
-				<span classes={[ css.details ]} key="footer">
+				<a href="/atom.xml">rss feed</a>
+				<br />
+				<span classes={[css.details]} key="footer">
 					Last build: {buildTime}
 				</span>
 			</footer>

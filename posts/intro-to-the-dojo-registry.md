@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: An introduction to managing widgets with the Dojo Registry
 tags: dojo, javascript, web development
 cover_image: /assets/blog/intro-to-the-dojo-registry.jpg
+published: true
 ---
 
 The [Dojo Registry](https://dojo.io/docs/index.html#doc--dojo__framework__v4_0_0__src__widget-core__README_md___registry) is a powerful way you can work with widgets in your applications. We've had the opportunity to touch on the Registry in previous posts. We used it to inject context into our application with [Dojo Containers](https://learn-dojo.com/dojo-containers/) and it's also used when you want to use [routing](https://learn-dojo.com/dojo-cli-template-app/) in your applications.

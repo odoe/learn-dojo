@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: Quick look at how to use Build Time Rendering with Dojo
 tags: javascript, web development, dojo
 cover_image: /assets/blog/build-time-rendering-in-dojo.jpg
+published: true
 ---
 
 You may have worked with other frameworks that support server side rendering. What it basically does is render the HTML of your page and pass it down to the client as it would look when the initial JavaScript loads and then you can interact with it and the JavaScript stuff works its _magic_ to make a cool interactive application.

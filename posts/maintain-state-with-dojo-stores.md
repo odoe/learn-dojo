@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How to use Dojo Stores to maintain state across your applications.
 tags: javascript, dojo, typescript, webdev
 cover_image: /assets/blog/maintain-state-with-dojo-stores.jpg
+published: true
 ---
 
 We previously looked at how you could maintain state with [Dojo containers](https://learn-dojo.com/dojo-containers/) using a context for your application. To recap, containers are basically higher order components that you can use to add state management to widgets.

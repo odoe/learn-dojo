@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: Review of the Dojo CLI template application
 tags: javascript, web development, dojo, typescript
 cover_image: /assets/blog/dojo-cli-template-app.jpg
+published: true
 ---
 
 

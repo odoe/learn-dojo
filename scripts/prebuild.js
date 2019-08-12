@@ -14,10 +14,16 @@ fs.readJson(dojorcPath, (error, dojorc) => {
 			return console.log('Unable to scan directory: ' + err);
 		}
 
-		const posts = files.sort().map(function(file) {
-			// remove the file extension
-			return file.replace('.md', '');
-		});
+		const posts = files
+			.filter(function(file) {
+				// don't include the template
+				return file !== `template.md`;
+			})
+			.sort()
+			.map(function(file) {
+				// remove the file extension
+				return file.replace('.md', '');
+			});
 
 		dojorc['build-app']['build-time-render'].paths = posts;
 		dojorc['build-app']['build-time-render'].paths.push('.');

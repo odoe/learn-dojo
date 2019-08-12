@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How to build a basic app in Dojo, but not hello world!
 tags: javascript, typescript, dojo, webdev
 cover_image: /assets/blog/building-a-simple-app-in-dojo.jpg
+published: true
 ---
 
 I've been thinking about how I could demonstrate building a basic Dojo application beyond a hello world app or a Todo app. There are some really good samples in the [dojo/examples](https://github.com/dojo/examples) repo. Then I came across [this react application](https://github.com/ahfarmer/emoji-search) for searching for emojis and who doesn't have to search for emojis regularly, so I knew I found my demo. It also helps that the dojo template on [Code Sandbox](https://codesandbox.io/) now uses TSX/JSX as the default.

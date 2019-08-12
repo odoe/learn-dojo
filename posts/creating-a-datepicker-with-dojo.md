@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: We walk through the steps needed to create a custom DatePicker using Dojo.
 tags: javascript, dojo, typescript, webdev
 cover_image: /assets/blog/create-a-datepicker-with-dojo.jpg
+published: true
 ---
 
 

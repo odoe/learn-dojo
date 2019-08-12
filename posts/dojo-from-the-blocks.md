@@ -5,6 +5,7 @@ author: Rene Rubalcava
 description: How to use Dojo blocks during build time rendering
 tags: javascript, dojo, webdev, frameworks
 cover_image: /assets/blog/dojo-from-the-blocks.jpg
+published: true
 ---
 
 One of the low-key features that was released in [Dojo 5](https://dojo.io/blog/2019/01/29/2019-01-29-Version-5-Dojo/) was the introduction of Blocks. Blocks go hand-in-hand with [Dojo build time rendering](https://learn-dojo.com/build-time-rendering-in-dojo/).
