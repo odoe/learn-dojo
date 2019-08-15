@@ -1,12 +1,11 @@
-import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
-import { tsx } from '@dojo/framework/widget-core/tsx';
-import ThemedMixin, { theme, ThemedProperties } from '@dojo/framework/widget-core/mixins/Themed';
+import { tsx, create } from '@dojo/framework/core/vdom';
+import theme from '@dojo/framework/core/middleware/theme';
 
 import * as css from './Article.m.css';
 
-@theme(css)
-export default class Article extends ThemedMixin(WidgetBase)<ThemedProperties> {
-	protected render() {
-		return <article classes={[ this.theme(css.root) ]}>{this.children}</article>;
-	}
-}
+const factory = create({ theme });
+
+export default factory(({ children, middleware: { theme } }) => {
+  const { root } = theme.classes(css);
+  return <article classes={[ root ]}>{children}</article>
+});

@@ -1,6 +1,5 @@
-import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
-import { tsx } from '@dojo/framework/widget-core/tsx';
-import has from '@dojo/framework/has/has';
+import { tsx, create } from '@dojo/framework/core/vdom';
+import has from '@dojo/framework/core/has';
 
 import * as css from './Footer.m.css';
 
@@ -22,24 +21,24 @@ function createLinks(links: FooterLink[]) {
 	]);
 }
 
-export default class Footer extends WidgetBase<FooterProperties> {
-	protected render() {
-		const { author, footerLinks } = this.properties;
-		const d = new Date();
-		const buildTime = has('build-time-render') ? dateFormatter.format(d) : null;
-		const name = has('build-time-render') ? author : null;
-		const links = createLinks(footerLinks);
-		return (
-			<footer key="footer" classes={[css.root]}>
-				<span>&copy; 2019 {name}</span>
-				<br />
-				{links}
-				<a href="/atom.xml">rss feed</a>
-				<br />
-				<span classes={[css.details]} key="footer">
-					Last build: {buildTime}
-				</span>
-			</footer>
-		);
-	}
-}
+const factory = create().properties<FooterProperties>();
+
+export default factory(({ properties }) => {
+  const { author, footerLinks } = properties();
+  const d = new Date();
+  const buildTime = has('build-time-render') ? dateFormatter.format(d) : null;
+  const name = has('build-time-render') ? author : null;
+  const links = createLinks(footerLinks);
+  return (
+    <footer key="footer" classes={[css.root]}>
+      <span>&copy; {d.getFullYear()} {name}</span>
+      <br />
+      {links}
+      <a href="/atom.xml">rss feed</a>
+      <br />
+      <span classes={[css.details]} key="footer">
+        Last build: {buildTime}
+      </span>
+    </footer>
+  );
+});
