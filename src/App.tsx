@@ -16,9 +16,7 @@ export default factory(({ properties }) => {
       <Outlet
         id="blog"
         renderer={(matchDetails) => {
-          console.log('OUTLET', matchDetails);
           const { params } = matchDetails;
-          console.log('params?', params);
           if (params.path && params.path !== '') {
             return <Blog standalone path={params.path} />;
           }

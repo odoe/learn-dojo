@@ -18,7 +18,7 @@ export default factory(({ children, properties }) => {
     <div classes={[ css.root ]}>
       <Header title={title} />
       <Hero description={description} />
-      <main classes={[ css.section ]}>{children}</main>
+      <main classes={[ css.section ]}>{children()}</main>
       <SignUp />
       <Footer {...{ author, footerLinks }} />
     </div>

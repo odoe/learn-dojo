@@ -7,5 +7,5 @@ const factory = create({ theme });
 
 export default factory(({ children, middleware: { theme } }) => {
   const { root } = theme.classes(css);
-  return <article classes={[ root ]}>{children}</article>
+  return <article classes={[ root ]}>{children()}</article>
 });
