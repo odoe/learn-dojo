@@ -2,13 +2,13 @@
 title: Migrating learn-dojo to Dojo 6
 date: 2019-08-16
 author: Rene Rubalcava
-description: Provide a good SEO subscription
+description: How I migrated the learn-dojo site to Dojo 6 and a look at the new functional widgets capabilities!
 tags: javascript, dojo, webdev,  dojo6
-cover_image: /assets/blog/image.jpg
-published: false
+cover_image: /assets/blog/dojo-migrate-dojo6.jpg
+published: true
 ---
 
-The latest release of Dojo 6 brings with it some major updates to how you can build apps with Dojo. Some files have moved, but I think one of the biggest new features available to developers is the use of functional widgets. This doesn't mean you can't continue to use class based widgets, but there are some nice advantages to using functional widgets.
+The latest release of [Dojo 6](https://dojo.io/) brings with it some major updates to how you can build apps with Dojo. Some files have moved, but I think one of the biggest new features available to developers is the use of functional widgets. This doesn't mean you can't continue to use class based widgets, but there are some nice advantages to using functional widgets.
 
 In case you didn't know, [learn-dojo](https://learn-dojo.com) is a static site, [built with Dojo](https://learn-dojo.com/building-static-site-with-dojo). So as Dojo 6 development was ongoing, I was already looking at what I would need to do to migrate the site to the latest Dojo.
 
@@ -97,7 +97,7 @@ export default factory(({ properties }) => {
 
 Why is `properties` a function and not just an object? This has to do with some other features of functional widgets that allow middleware to be used. This ensures that you don't get stale values from the passed properties. 
 
-> _We'll cover the new middleware capabilities in more detail in in a future blog post_.
+_We'll cover the new middleware capabilities in more detail in in a future blog post_.
 
 The rest of this widget looks like the previous version returning JSX vdom.
 
@@ -186,7 +186,7 @@ export default factory(({ middleware: { block }, properties }) => {
 
 To use this in a render factory method, pass the block middleware to the `create` method so that it's available to your render factory.
 
-> Anything you pass into the create() method will be available to your render factory methods as middlewarre.
+Anything you pass into the create() method will be available to your render factory methods as middleware.
 
 ```ts
 const factory = create({ block }).properties<{ standalone?: boolean; path?: string }>();
