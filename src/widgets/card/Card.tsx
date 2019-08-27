@@ -1,5 +1,4 @@
-import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
-import { tsx } from '@dojo/framework/widget-core/tsx';
+import { tsx, create } from '@dojo/framework/core/vdom';
 
 import Link from '@dojo/framework/routing/Link';
 
@@ -16,34 +15,34 @@ interface CardProperties {
 	path: string;
 }
 
-export default class Card extends WidgetBase<CardProperties> {
-	protected render() {
-		const { title, date, description, path, cover_image } = this.properties;
-		return (
-			<section classes={[ css.root ]}>
-				<div classes={[ css.column ]}>
-					<Link
-						to="blog"
-						params={{
-							path: path.replace('posts/', '').replace('.md', '')
-						}}
-					>
-						{title}
-					</Link>
-					<p>{dateFormatter(new Date(date))}</p>
-					<span>{description}</span>
-				</div>
-				<div classes={[ css.column ]}>
-					<Link
-						to="blog"
-						params={{
-							path: path.replace('posts/', '').replace('.md', '')
-						}}
-					>
-						<img alt={description} loading="lazy" classes={[ css.image ]} src={cover_image} />
-					</Link>
-				</div>
-			</section>
-		);
-	}
-}
+const factory = create().properties<CardProperties>();
+
+export default factory(({ properties }) => {
+  const { title, date, description, path, cover_image } = properties();
+  return (
+    <section classes={[ css.root ]}>
+      <div classes={[ css.column ]}>
+        <Link
+          to="blog"
+          params={{
+            path: path.replace('posts/', '').replace('.md', '')
+          }}
+        >
+          {title}
+        </Link>
+        <p>{dateFormatter(new Date(date))}</p>
+        <span>{description}</span>
+      </div>
+      <div classes={[ css.column ]}>
+        <Link
+          to="blog"
+          params={{
+            path: path.replace('posts/', '').replace('.md', '')
+          }}
+        >
+          <img alt={description} loading="lazy" classes={[ css.image ]} src={cover_image} />
+        </Link>
+      </div>
+    </section>
+  );
+});

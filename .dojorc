@@ -15,6 +15,7 @@
         "intro-to-the-dojo-registry",
         "intro-to-the-dojo-router",
         "maintain-state-with-dojo-stores",
+        "migrating-to-dojo-6",
         "style-dojo-widgets",
         "testing-with-dojo",
         "up-and-running-with-dojo-cli",

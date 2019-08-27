@@ -1,8 +1,7 @@
-import renderer from '@dojo/framework/widget-core/vdom';
-import Registry from '@dojo/framework/widget-core/Registry';
-import { tsx } from '@dojo/framework/widget-core/tsx';
+import renderer, { tsx } from '@dojo/framework/core/vdom';
+import Registry from '@dojo/framework/core/Registry';
 import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
-import { registerThemeInjector } from '@dojo/framework/widget-core/mixins/Themed';
+import { registerThemeInjector } from '@dojo/framework/core/mixins/Themed';
 import { StateHistory } from '@dojo/framework/routing/history/StateHistory';
 
 import dojo from '@dojo/themes/dojo';

@@ -8,7 +8,7 @@ const toH = require('hast-to-hyperscript');
 const frontmatter = require('remark-frontmatter');
 const parseFrontmatter = require('remark-parse-yaml');
 
-const { v } = require('@dojo/framework/widget-core/d');
+const { v } = require('@dojo/framework/core/vdom');
 
 const { remarkPlugins, rehypePlugins } = require('../site-config');
 

@@ -1,5 +1,5 @@
 // adapted from dojo blog https://github.com/dojo/site/blob/master/src/blog/rss.ts
-import { DNode } from '@dojo/framework/widget-core/interfaces';
+import { DNode } from '@dojo/framework/core/interfaces';
 
 import { Feed } from 'feed';
 import { join } from 'path';

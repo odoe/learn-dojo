@@ -1,5 +1,4 @@
-import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
-import { tsx } from '@dojo/framework/widget-core/tsx';
+import { tsx, create } from '@dojo/framework/core/vdom';
 
 import Footer from '../widgets/footer/Footer';
 import Header from '../widgets/header/Header';
@@ -10,17 +9,19 @@ import * as css from './Layout.m.css';
 
 import { SiteMeta } from '../interfaces';
 
-export default class Layout extends WidgetBase<SiteMeta> {
-	protected render() {
-		const { title, description, author, footerLinks } = this.properties;
-		return (
-			<div classes={[ css.root ]}>
-				<Header title={title} />
-				<Hero description={description} />
-				<main classes={[ css.section ]}>{this.children}</main>
-				<SignUp />
-				<Footer {...{ author, footerLinks }} />
-			</div>
-		);
-	}
-}
+const factory = create().properties<SiteMeta>();
+
+export default factory(({ children, properties }) => {
+  const { title, description, author, footerLinks } = properties();
+
+  return (
+    <div classes={[ css.root ]}>
+      <Header title={title} />
+      <Hero description={description} />
+      <main classes={[ css.section ]}>{children()}</main>
+      <SignUp />
+      <Footer {...{ author, footerLinks }} />
+    </div>
+  );
+});
+
