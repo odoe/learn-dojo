@@ -1,0 +1,68 @@
+{
+  "build-app": {
+    "build-time-render": {
+      "root": "root",
+      "paths": [
+        "build-time-rendering-in-dojo",
+        "building-a-simple-app-in-dojo",
+        "building-static-site-with-dojo",
+        "creating-a-datepicker-with-dojo",
+        "dojo-cli-template-app",
+        "dojo-containers",
+        "dojo-from-the-blocks",
+        "dojo-graphql",
+        "dojo-process-middleware",
+        "intro-to-the-dojo-registry",
+        "intro-to-the-dojo-router",
+        "maintain-state-with-dojo-stores",
+        "migrating-to-dojo-6",
+        "style-dojo-widgets",
+        "testing-with-dojo",
+        "up-and-running-with-dojo-cli",
+        "watch-for-property-changes-in-widgets",
+        "web-components-with-dojo",
+        "."
+      ],
+      "puppeteerOptions": {
+        "args": [
+          "--no-sandbox",
+          "--disable-setuid-sandbox"
+        ]
+      }
+    },
+    "pwa": {
+      "manifest": {
+        "name": "learn-dojo",
+        "short_name": "learn-dojo",
+        "description": "learn dojo",
+        "background_color": "#ffffff",
+        "theme_color": "#009dff",
+        "icons": [
+          {
+            "src": "src/assets/logo.png",
+            "sizes": [
+              128,
+              256,
+              512
+            ]
+          }
+        ]
+      },
+      "serviceWorker": {
+        "clientsClaim": true,
+        "routes": [
+          {
+            "urlPattern": ".*",
+            "strategy": "networkFirst",
+            "expiration": {
+              "maxEntries": 25
+            }
+          }
+        ]
+      }
+    }
+  },
+  "test-intern": {},
+  "create-app": {},
+  "create-widget": {}
+}
