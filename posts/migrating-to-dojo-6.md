@@ -1,14 +1,14 @@
 ---
 title: Migrating learn-dojo to Dojo 6
-date: 2019-08-16
+date: 2019-08-28
 author: Rene Rubalcava
-description: How I migrated the learn-dojo site to Dojo 6 and a look at the new functional widgets capabilities!
+description: How I migrated the learn-dojo site to Dojo 6 and a look at the new function-based widgets capabilities!
 tags: javascript, dojo, webdev,  dojo6
 cover_image: /assets/blog/dojo-migrate-dojo6.jpg
 published: true
 ---
 
-The latest release of [Dojo 6](https://dojo.io/) brings with it some major updates to how you can build apps with Dojo. Some files have moved, but I think one of the biggest new features available to developers is the use of functional widgets. This doesn't mean you can't continue to use class based widgets, but there are some nice advantages to using functional widgets.
+The latest release of [Dojo 6](https://dojo.io/) brings with it some major updates to how you can build apps with Dojo. There are some enhancements to builds, and custom elements, but I think one of the biggest new features available to developers is the use of function-based widgets. This doesn't mean you can't continue to use class-based widgets, but there are some nice advantages to using the new function-based widgets.
 
 In case you didn't know, [learn-dojo](https://learn-dojo.com) is a static site, [built with Dojo](https://learn-dojo.com/building-static-site-with-dojo). So as Dojo 6 development was ongoing, I was already looking at what I would need to do to migrate the site to the latest Dojo.
 
@@ -40,7 +40,7 @@ export default class Header extends WidgetBase<{ title: string }> {
 }
 ```
 
-This widget takes an object with a `title` that is a `string` as it's property. This isn't a complicated widget, Now, when we convert it to a functional widget, not much is going to change in terms of what is being rendered, but there are some slight differences.
+This widget takes an object with a `title` that is a `string` as its property. This isn't a complicated widget, Now, when we convert it to a function-based widget, not much is going to change in terms of what is being rendered, but there are some slight differences in the [Header](https://github.com/odoe/learn-dojo/blob/c480ef742b088dd3bea9a28d686c35a3e551271b/src/widgets/header/Header.tsx).
 
 ```tsx
 // converted to Dojo 6
@@ -67,9 +67,9 @@ export default factory(({ properties }) => {
 });
 ```
 
-First of all, the folder `widget-core` ha been renamed to `core` in `@dojo/framework`. This is just a organizational change to Dojo. But the other new one is the use of this `create` module. The `create` module that lets you create a factory method for your render function.
+First of all, the folder `widget-core` has been renamed to `core` in `@dojo/framework`. This is just a organizational change to Dojo. But the other new one is the use of this `create` module. The `create` module that lets you create a factory method for your render function.
 
-To create a basic factory render function you could just do something like this.
+To create a basic factory render function, you could do something like this.
 
 ```tsx
 // return a render factory
@@ -80,13 +80,13 @@ export factory(function MyBasicWidget() {
 });
 ```
 
-But the `Header` widget requires some properties, so we can tell the render factory that properties are expected and we can type them.
+But the `Header` widget requires some properties, so we can tell the render factory that properties are expected, and we can type them.
 
 ```ts
 const factory = create().properties<{ title: string }>();
 ```
 
-Now in the factory method, it will be pass a `properties()` method that will provide the passed properties to the widget.
+Now in the factory method, it will be pass a `properties()` method that will return the provided properties to the widget.
 
 ```tsx
 export default factory(({ properties }) => {
@@ -95,7 +95,7 @@ export default factory(({ properties }) => {
 });
 ```
 
-Why is `properties` a function and not just an object? This has to do with some other features of functional widgets that allow middleware to be used. This ensures that you don't get stale values from the passed properties. 
+Why is `properties` a function and not just an object? This has to do with some other features of function-based widgets that allow middleware to be used. This ensures that you don't get stale values from the properties. 
 
 _We'll cover the new middleware capabilities in more detail in in a future blog post_.
 
@@ -105,9 +105,9 @@ It is normally recommended that you provide _named_ render methods to the render
 
 ## Basic Middleware
 
-One of the stand out features of Dojo is the use of [blocks](https://learn-dojo.com/dojo-from-the-blocks) that let you run code in node when you use build time rendering. It's critical in how learn-dojo is built because blocks are used to parse the posts from markdown, and run various tooling for code blocks, and formatting. In class based widgets, this is done via the use metas.
+One of the standout features of Dojo is the use of [blocks](https://learn-dojo.com/dojo-from-the-blocks) that let you run code in node when you use build time rendering. It's critical in how learn-dojo is built because blocks are used to parse the posts from markdown, and run various tooling for code blocks, and formatting. In class-based widgets, this is done via the use metas.
 
-Here is how a blog page is rendered with a class based widget.
+Here is how a blog page is rendered with a class-based widget.
 
 ```tsx
 // src/pages/Blog.tsx
@@ -146,7 +146,7 @@ export default class Blog extends WidgetBase<{
 }
 ```
 
-Let's dive right into how this looks as a functional widget in Dojo 6.
+Let's dive right into how the [Blog](https://github.com/odoe/learn-dojo/blob/c480ef742b088dd3bea9a28d686c35a3e551271b/src/pages/Blog.tsx) module looks as a function-based widget in Dojo 6.
 
 ```tsx
 // converted to Dojo 6
@@ -201,7 +201,7 @@ Now the `block` is available on the `middleware` property passed to the render f
 const blogs: any = block(compileBlogIndex)({});
 ```
 
-Notice that now, you can run the middleware block independently of any `meta` helpers like in a class based method. This is one of my favorite features of the new functional widgets!
+Notice that now, you can run the middleware block independently of any `meta` helpers like in a class-based method. This is one of my favorite features of the new function-based widgets!
 
 ## Composable Widgets
 
@@ -226,7 +226,7 @@ export default class Layout extends WidgetBase<SiteMeta> {
 }
 ```
 
-Like the update to make `properties` a function so you always have the latest values, the same is true for `children`.
+Like the update to make `properties` a function so you always have the latest values, the same is true for `children` now being a function in the [Layout](https://github.com/odoe/learn-dojo/blob/c480ef742b088dd3bea9a28d686c35a3e551271b/src/layouts/Layout.tsx).
 
 ```tsx
 // converted to Dojo 6
@@ -249,12 +249,12 @@ export default factory(({ children, properties }) => {
 });
 ```
 
-That's the only change in regards to rendering children in your widgets.
+That's the only change in regard to rendering children in your widgets.
 
 ## Summary
 
-Dojo 6 is a significant release in the Dojo roadmap, offering some exciting new capabilities in build reactive widgets for your applications. There are plenty more new features not covered in this blog post that will be discussed in the future.
+Dojo 6 is a significant release in the Dojo roadmap, offering some exciting new capabilities in build reactive widgets for your applications. There are plenty more new features not covered in this blog post that will be discussed in the future. For details, see the [official Dojo 6 blog post](https://dojo.io/blog/version-6-dojo).
 
-I was able to migrate learn-dojo in a single morning based off the Dojo 6 alpha and updated documentation. I am very impressed with the new functional widget pattern in Dojo and use of middleware that we barely scratched the surface of in this post.
+I was able to migrate [learn-dojo](https://learn-dojo.com/) in a single morning based off the new Dojo documentation. I'm really impressed with the new function-based widget pattern in Dojo and the use of middleware that we barely scratched the surface of in this post.
 
 Stay tuned for more!
