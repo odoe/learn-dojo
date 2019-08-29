@@ -3,7 +3,7 @@ title: Migrating learn-dojo to Dojo 6
 date: 2019-08-28
 author: Rene Rubalcava
 description: How I migrated the learn-dojo site to Dojo 6 and a look at the new function-based widgets capabilities!
-tags: javascript, dojo, webdev,  dojo6
+tags: javascript, typescript, dojo, webdev,  dojo6
 cover_image: /assets/blog/dojo-migrate-dojo6.jpg
 published: true
 ---
@@ -18,25 +18,25 @@ Let's take a look at a basic [Header](https://github.com/odoe/learn-dojo/blob/df
 
 ```tsx
 // src/widgets/header/Header.tsx
-import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
-import { tsx } from '@dojo/framework/widget-core/tsx';
-import Link from '@dojo/framework/routing/Link';
+import WidgetBase from "@dojo/framework/widget-core/WidgetBase";
+import { tsx } from "@dojo/framework/widget-core/tsx";
+import Link from "@dojo/framework/routing/Link";
 
-import * as css from './Header.m.css';
+import * as css from "./Header.m.css";
 
 export default class Header extends WidgetBase<{ title: string }> {
-	protected render() {
-		const { title } = this.properties || 'My Site';
-		return (
-			<header classes={[css.root]}>
-				<div classes={[css.title]}>
-					<Link to="/" isOutlet={false} classes={[css.link]}>
-						{title}
-					</Link>
-				</div>
-			</header>
-		);
-	}
+  protected render() {
+    const { title } = this.properties || "My Site";
+    return (
+      <header classes={[css.root]}>
+        <div classes={[css.title]}>
+          <Link to="/" isOutlet={false} classes={[css.link]}>
+            {title}
+          </Link>
+        </div>
+      </header>
+    );
+  }
 }
 ```
 
