@@ -23,7 +23,7 @@ There are two middlewares available for managing local state in a widget.
 
 ### cache
 
-You might use `cache` for some fine grained state management, because if you do use it, it's up to you to manually invalidate the widget, so that it will render based with updated `cache` properties using the `[invalidator`](https://dojo.io/learn/middleware/core-render-middleware#invalidator) middleware.
+You might use `cache` for some fine grained state management, because if you do use it, it's up to you to manually invalidate the widget, so that it will render based with updated `cache` properties using the [`invalidator`](https://dojo.io/learn/middleware/core-render-middleware#invalidator) middleware.
 
 ```tsx
 // src/widgets/Parrot/Parrot.tsx
@@ -73,7 +73,7 @@ This is fine, _but it could be easier_.
 
 ### icache
 
-The `icache` is designed specifically to work like `cache`, but to also run an `invalidator` on each update. It also comes with an extra method, `icache.getOrSet()` that will return the current value or a specified default value if none available.
+The `icache` is designed specifically to work like `cache`, but to also run an `invalidator()` on each update. It also comes with an extra method, `icache.getOrSet()` that will return the current value or a specified default value if none available.
 
 ```tsx
 // src/widgets/Parrot/Parrot.tsx
@@ -116,9 +116,9 @@ This would be equivalent to the [`@watch`](https://github.com/dojo/framework/tre
 
 ## Application Store
 
-There are a number of ways you could work [stores](https://dojo.io/learn/stores/introduction) in Dojo. You could use [containers](https://learn-dojo.com/dojo-containers) or a [provider](https://github.com/dojo/framework/tree/master/src/stores#advanced). _Or_, you could use a [store](https://dojo.io/learn/stores/introduction#store-middleware) middleware!
+There are a number of ways you could work with [stores](https://dojo.io/learn/stores/introduction) in Dojo. You could use [containers](https://learn-dojo.com/dojo-containers) or a [provider](https://github.com/dojo/framework/tree/master/src/stores#advanced). _Or_, you could use a [store](https://dojo.io/learn/stores/introduction#store-middleware) middleware!
 
-We can create a `store` middleware to hold a list of users.
+We can create a `store` middleware that will hold a list of users.
 
 ```ts
 // src/middleware/store.ts
@@ -153,7 +153,7 @@ export const getUsersProcess = createProcess("fetch-users", [
 ]);
 ```
 
-With a `store` and a `process` ready to, we can use them in a widget that will display our list of users.
+With a `store` and a `process` ready to go, we can use them in a widget that will display our list of users.
 
 ```tsx
 // src/widgets/Users/Users.tsx
