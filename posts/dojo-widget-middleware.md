@@ -5,7 +5,7 @@ author: Rene Rubalcava
 description: Working with middleware in dojo function-based widgets
 tags: javascript, dojo, webdev, dojo6
 cover_image: /assets/blog/dojo-widget-middleware.jpg
-published: false
+published: true
 ---
 
 The newest features of [Dojo 6](https://dojo.io/blog/version-6-dojo) are going to be the new function based widgets and middleware.
@@ -67,13 +67,13 @@ export default Parrot;
 
 You can see this demo in action here.
 
-<iframe src="https://codesandbox.io/embed/dojo-middleware-icache-3wc5n?fontsize=14&module=%2Fsrc%2Fwidgets%2FParrot%2FParrot.tsx" title="dojo-middleware-cache" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+!(https://codesandbox.io/embed/dojo-middleware-cache-3wc5n?fontsize=14&module=%2Fsrc%2Fwidgets%2FParrot%2FParrot.tsx)
 
 This is fine, _but it could be easier_.
 
 ### icache
 
-The `icache` is designed specifically to work like just like `cache`, but to also run an `invalidator` on each update. It also comes with an extra method, `icache.getOrSet()` that will return the current value or a specified default value if none available.
+The `icache` is designed specifically to work like `cache`, but to also run an `invalidator` on each update. It also comes with an extra method, `icache.getOrSet()` that will return the current value or a specified default value if none available.
 
 ```tsx
 // src/widgets/Parrot/Parrot.tsx
@@ -112,11 +112,11 @@ export default Parrot;
 
 This would be equivalent to the [`@watch`](https://github.com/dojo/framework/tree/master/src/core#internal-widget-state) decorator that you can use with class based widgets. I would guess that 99% of the time, you would use `icache` to manage local state in your widgets.
 
-<iframe src="https://codesandbox.io/embed/dojo-middleware-icache-n6ktf?fontsize=14&module=%2Fsrc%2Fwidgets%2FParrot%2FParrot.tsx" title="dojo-middleware-icache" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+!(https://codesandbox.io/embed/dojo-middleware-icache-n6ktf?fontsize=14&module=%2Fsrc%2Fwidgets%2FParrot%2FParrot.tsx)
 
 ## Application Store
 
-There are a number of ways you could work [stores](https://dojo.io/learn/stores/introduction) in Dojo. You could use [containers](https://learn-dojo.com/dojo-containers) or a [provider](https://github.com/dojo/framework/tree/master/src/stores#advanced). _Or_, you could work a [store](https://dojo.io/learn/stores/introduction#store-middleware) middleware!
+There are a number of ways you could work [stores](https://dojo.io/learn/stores/introduction) in Dojo. You could use [containers](https://learn-dojo.com/dojo-containers) or a [provider](https://github.com/dojo/framework/tree/master/src/stores#advanced). _Or_, you could use a [store](https://dojo.io/learn/stores/introduction#store-middleware) middleware!
 
 We can create a `store` middleware to hold a list of users.
 
@@ -189,7 +189,7 @@ export default render(function Users({ middleware: { store } }) {
   const { get, path, executor } = store;
   // get current value of Users
   const users = get(path("users"));
-  if (!users || !users.length) {
+  if (!users) {
     // if no Users, run the `executor` against
     // the process to fetch a list of Users
     executor(fetchUsersProcess)(null);
@@ -220,7 +220,7 @@ In this case, the `fetchUsersProcess` does not expect a payload, so we can pass 
 
 You can see this demo in action here.
 
-<iframe src="https://codesandbox.io/embed/dojo-function-based-widgets-94eyy?fontsize=14&module=%2Fsrc%2Fwidgets%2FUsers%2FUsers.tsx" title="dojo-function-based-widgets" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+!(https://codesandbox.io/embed/dojo-function-based-widgets-94eyy?fontsize=14&module=%2Fsrc%2Fwidgets%2FUsers%2FUsers.tsx)
 
 ## Summary
 

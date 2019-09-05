@@ -7,6 +7,7 @@ const remark2rehype = require('remark-rehype');
 const toH = require('hast-to-hyperscript');
 const frontmatter = require('remark-frontmatter');
 const parseFrontmatter = require('remark-parse-yaml');
+const remarkIframes = require('remark-iframes');
 
 const { v } = require('@dojo/framework/core/vdom');
 
@@ -26,6 +27,13 @@ export const toVNodes = (content: string) => {
 	let counter = 0;
 	let pipeline = unified()
 		.use(markdown as any, { commonmark: true })
+		.use(remarkIframes, {
+			'codesandbox.io': {
+				tag: 'iframe',
+				width: '100%',
+				height: 500
+			}
+		})
 		.use(frontmatter, 'yaml');
 
 	// markdown plugins
@@ -55,7 +63,10 @@ export const toVNodes = (content: string) => {
 
 // Gets yaml metadata from markdown
 export const getMetaData = (content: string) => {
-	const pipeline = unified().use(markdown, { commonmark: true }).use(frontmatter, 'yaml').use(parseFrontmatter);
+	const pipeline = unified()
+		.use(markdown, { commonmark: true })
+		.use(frontmatter, 'yaml')
+		.use(parseFrontmatter);
 
 	const nodes = pipeline.parse(content);
 	const result = pipeline.runSync(nodes);
