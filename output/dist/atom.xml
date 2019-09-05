@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-09-05T16:26:28.114Z</updated>
+    <updated>2019-09-05T16:33:46.839Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -58,7 +58,7 @@
         <id>https://learn-dojo.com/dojo-widget-middleware</id>
         <link href="https://learn-dojo.com/dojo-widget-middleware"/>
         <updated>2019-09-05T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Working with middleware in dojo function-based widgets]]></summary>
+        <summary type="html"><![CDATA[Learn how to use middleware in Dojo function based widgets, managing local and application state, to build awesome applications!]]></summary>
         <author>
             <name>Rene Rubalcava</name>
             <email/>

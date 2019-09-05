@@ -2,13 +2,13 @@
 title: Dojo Widget Middleware
 date: 2019-09-05
 author: Rene Rubalcava
-description: Working with middleware in dojo function-based widgets
+description: Learn how to use middleware in Dojo function based widgets, managing local and application state, to build awesome applications!
 tags: javascript, dojo, webdev, dojo6
 cover_image: /assets/blog/dojo-widget-middleware.jpg
 published: true
 ---
 
-The newest features of [Dojo 6](https://dojo.io/blog/version-6-dojo) are going to be the new function based widgets and middleware.
+The newest features of [Dojo 6](https://dojo.io/blog/version-6-dojo) include the new function based widgets and widget middleware.
 
 Dojo class based widgets come with decorators to [watch for property changes](https://learn-dojo.com/watch-for-property-changes-in-widgets) and work with [metas](https://learn-dojo.com/dojo-from-the-blocks) which allow you to get information about your widget.
 
