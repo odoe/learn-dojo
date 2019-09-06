@@ -226,5 +226,5 @@ You can see this demo in action here.
 
 There's more [middleware](https://dojo.io/learn/middleware/available-middleware) available that we didn't cover in this post, related to theming, i18n, DOM related, and interacting with the render method. We'll cover most of these in future blog posts!
 
-I'm really excited about all the new features in this latest release of Dojo and working with the available middleware and even what I could do with a [custom middlware](https://dojo.io/learn/middleware/middleware-fundamentals#creating-middleware)!
+I'm really excited about all the new features in this latest release of Dojo and working with the available middleware and even what I could do with a [custom middleware](https://dojo.io/learn/middleware/middleware-fundamentals#creating-middleware)!
 
