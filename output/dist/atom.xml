@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-09-06T15:48:01.466Z</updated>
+    <updated>2019-09-17T15:37:26.698Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -52,6 +52,19 @@
             <uri/>
         </author>
         <published>2019-07-14T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Theming with Dojo Middleware]]></title>
+        <id>https://learn-dojo.com/dojo-theme-middleware</id>
+        <link href="https://learn-dojo.com/dojo-theme-middleware"/>
+        <updated>2019-09-17T15:43:43.000Z</updated>
+        <summary type="html"><![CDATA[A look at how to use the Dojo theme middleware to apply themes to your application.]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2019-09-17T15:43:43.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[Dojo Widget Middleware]]></title>
