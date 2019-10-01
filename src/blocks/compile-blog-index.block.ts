@@ -17,7 +17,7 @@ export default async function(options: any) {
 			blogs.push({
 				sortDate: new Date(`${meta.date}`),
 				file,
-				content,
+				// content,
 				meta
 			});
 		}

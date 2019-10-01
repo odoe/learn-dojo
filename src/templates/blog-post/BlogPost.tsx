@@ -6,19 +6,17 @@ import Link from '@dojo/framework/routing/Link';
 import compileBlogPost from '../../blocks/compile-blog-post.block';
 
 import Article from '../../widgets/article/Article';
-import Card from '../../widgets/card/Card';
 
 import { dateFormatter } from '../../utils/formatter';
 
 export interface PostProperties {
-	excerpt?: boolean;
 	path: string;
 }
 
 const factory = create({ block }).properties<PostProperties>();
 
 export default factory(({ middleware: { block }, properties }) => {
-  let { excerpt = false, path }  = properties();
+  let { path }  = properties();
   if (!path.includes('.md')) {
     path = `${path}.md`;
   }
@@ -28,12 +26,9 @@ export default factory(({ middleware: { block }, properties }) => {
 
   if (post) {
     const date = dateFormatter(new Date(post.meta.date));
-    if (excerpt) {
-      return <Card path={path} {...post.meta} />;
-    }
     return (
       <section>
-        {!excerpt && <img src={post.meta.cover_image} />}
+        <img src={post.meta.cover_image} />
         <Article key={post.meta.title}>
           <Link
             to="blog"

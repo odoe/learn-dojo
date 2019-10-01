@@ -2,6 +2,7 @@ import { tsx, create } from '@dojo/framework/core/vdom';
 import Outlet from '@dojo/framework/routing/Outlet';
 
 import Blog from './pages/Blog';
+import BlogList from './blog-list/BlogList';
 
 import Layout from './layouts/Layout';
 
@@ -18,9 +19,9 @@ export default factory(({ properties }) => {
         renderer={(matchDetails) => {
           const { params } = matchDetails;
           if (params.path && params.path !== '') {
-            return <Blog standalone path={params.path} />;
+            return <Blog path={params.path} />;
           }
-          return <Blog />;
+          return <BlogList />;
         }}
       />
     </Layout>
