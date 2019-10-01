@@ -8,7 +8,6 @@ const factory = create({ block });
 
 export default factory(({ middleware: { block } }) => {
     const blogs = block(compileBlogIndex)({}) || [];
-    console.warn(blogs);
     return (
         <virtual>
             {blogs.map((blog) => <Card key={blog.file} path={blog.file} {...blog.meta} />)}
