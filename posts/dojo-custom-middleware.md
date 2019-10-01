@@ -155,7 +155,7 @@ const defaultCoordinates = { latitude: 0, longitude: 0 };
 export const geolocation = factory(({ middleware: { icache } }) => {
   return (): Coords => {
     // get current value or default
-    const coords = icache.getOrSet("coords", defaultCoordinates); // || defaultCoordinates;
+    const coords = icache.getOrSet("coords", defaultCoordinates);
     if (coords.latitude === 0 && coords.longitude === 0) {
       // only get location if it is not the default
       getGeolocation().then(results => {
