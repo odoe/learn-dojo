@@ -9,6 +9,10 @@ export const meta: SiteMeta = {
 		{
 			href: 'https://github.com/odoe/learn-dojo',
 			text: 'github'
+    },
+		{
+			href: 'https://www.youtube.com/channel/UCTMyJW_31j2hyZGKJpddgaQ',
+			text: 'youtube'
 		},
 		{
 			href: 'https://dojo.io/',

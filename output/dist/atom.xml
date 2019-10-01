@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-09-17T15:37:26.698Z</updated>
+    <updated>2019-10-01T17:09:46.279Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -26,6 +26,19 @@
             <uri/>
         </author>
         <published>2019-05-28T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Custom Dojo Middleware]]></title>
+        <id>https://learn-dojo.com/dojo-custom-middleware</id>
+        <link href="https://learn-dojo.com/dojo-custom-middleware"/>
+        <updated>2019-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How you can write your own custom middleware to use in your Dojo widgets]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2019-10-01T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[Dojo GraphQL]]></title>

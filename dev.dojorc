@@ -9,6 +9,7 @@
         "creating-a-datepicker-with-dojo",
         "dojo-cli-template-app",
         "dojo-containers",
+        "dojo-custom-middleware",
         "dojo-from-the-blocks",
         "dojo-graphql",
         "dojo-process-middleware",
