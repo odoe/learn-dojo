@@ -128,10 +128,10 @@ You could use a similar pattern to grab the browsers geolocation.
 
 ```ts
 // src/middleware/geolocation.ts
-import { create, invalidator } from "@dojo/framework/core/vdom";
-import cache from "@dojo/framework/core/middleware/cache";
+import { create } from "@dojo/framework/core/vdom";
+import icache from "@dojo/framework/core/middleware/icache";
 
-const factory = create({ cache, invalidator });
+const factory = create({ icache });
 
 type Coords = Pick<Coordinates, "latitude" | "longitude">;
 
@@ -152,10 +152,10 @@ const getGeolocation = async (): Promise<Coords> => {
 // default coordinates
 const defaultCoordinates = { latitude: 0, longitude: 0 };
 
-export const geolocation = factory(({ middleware: { cache, invalidator } }) => {
+export const geolocation = factory(({ middleware: { icache } }) => {
   return (): Coords => {
     // get current value or default
-    const coords = cache.get("coords") || defaultCoordinates;
+    const coords = icache.getOrSet("coords", defaultCoordinates); // || defaultCoordinates;
     if (coords.latitude === 0 && coords.longitude === 0) {
       // only get location if it is not the default
       getGeolocation().then(results => {
@@ -163,11 +163,9 @@ export const geolocation = factory(({ middleware: { cache, invalidator } }) => {
           coords.latitude !== results.latitude &&
           coords.longitude !== results.longitude
         ) {
-          // only update cache if different from current values
-          cache.set("coords", results);
-          // manually invalidate the middleware
-          // to force widget to rerender with updated data
-          invalidator();
+          // only update cache if different from current value
+          // this will invalidate the widget
+          icache.set("coords", results);
         }
       });
     }
@@ -178,7 +176,7 @@ export const geolocation = factory(({ middleware: { cache, invalidator } }) => {
 export default geolocation;
 ```
 
-This middleware is a good example of using the [`cache`](https://dojo.io/learn/middleware/available-middleware#cache) middleware, because I want to have more fine grained control of when I use the [`invalidator`](https://dojo.io/learn/middleware/core-render-middleware#invalidator) to invalidate my middleware properties. If I made the mistake of using the [`icache.getOrSet()`](https://dojo.io/learn/middleware/available-middleware#icache), it would put my widget into an infinite rerender loop because the `set` would constantly cause an invalidation. This way, I can make sure I'm invalidating the middleware when appropriate.
+This middleware uses the [`icache`](https://dojo.io/learn/middleware/available-middleware#icache) middleware so that when the geolocation properties are updated, it will invalidate the middleware and this will in turn invalidate the widget so it can rerender with new data.
 
 ```tsx
 // src/main.tsx
