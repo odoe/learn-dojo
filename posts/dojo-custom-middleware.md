@@ -12,7 +12,7 @@ Dojo provides a [middleware system](https://dojo.io/learn/middleware/introductio
 
 Middleware is really interesting because they can be used to help you interact with the DOM or with the properties of your widget.
 
-You can create middleware the same way you would a widget, except instead of return a vnode, you could return an object or function that can be used to do some extra work for your widget.
+You can create middleware the same way you would a widget, except instead of returning a vnode, you could return an object or function that can be used to do some extra work for your widget.
 
 The Dojo documentation touches on [creating your own middleware](https://dojo.io/learn/middleware/middleware-fundamentals#creating-middleware). How could you implement your own custom middleware for your own widgets?
 
@@ -57,7 +57,7 @@ export const PhoneNumber = factory(function PhoneNumber({
 export default PhoneNumber;
 ```
 
-The idea here is that I just want the `PhoneValidator` to place a red or green outline to my input to let me know if it's a valid phone number in the input. It's pretty simple, but is something I could reuse across multiple applications.
+The idea here is that I just want the `PhoneValidator` to place a red or green outline to my input to let me know if it's a valid phone number or not. It's pretty simple, but is something I could reuse across multiple applications.
 
 ```tsx
 // src/widgets/PhoneValidator.tsx
