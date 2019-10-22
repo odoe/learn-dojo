@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-10-03T14:12:18.775Z</updated>
+    <updated>2019-10-22T17:20:20.087Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -117,5 +117,18 @@
             <uri/>
         </author>
         <published>2019-05-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Revisiting Web Components with Dojo]]></title>
+        <id>https://learn-dojo.com/web-components-with-dojo-revisted</id>
+        <link href="https://learn-dojo.com/web-components-with-dojo-revisted"/>
+        <updated>2019-10-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[It's now even easier to export Dojo widgets to Web Components]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2019-10-22T00:00:00.000Z</published>
     </entry>
 </feed>

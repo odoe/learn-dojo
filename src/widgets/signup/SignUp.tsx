@@ -19,35 +19,10 @@ export default factory(() => (
         novalidate
       >
         <div classes={[ css.gridcontainer ]}>
-          <div classes={[ css.column, css.gdpr ]}>
+          <div classes={[ css.column ]}>
             <h3 classes={[ css.title ]}>
               <strong>Subscribe to newsletter</strong>
             </h3>
-            <div classes={[ css.info ]}>
-              <div>
-                <label>Marketing Permissions</label>
-                <p>Please select all the ways you would like to hear from odoenet:</p>
-                <fieldset classes={[ css.fieldset ]} name="interestgroup_field">
-                  <label classes={[ css.gdprcheck ]} for="gdpr_7561">
-                    <input
-                      type="checkbox"
-                      id="gdpr_7561"
-                      name="gdpr[7561]"
-                      value="Y"
-                      classes={[ css.checkbox ]}
-                    />
-                    <span>Email</span>{' '}
-                  </label>
-                </fieldset>
-                <p>
-                  You can unsubscribe at any time by clicking the link in the footer of our
-                  emails. For information about our privacy practices, please visit our
-                  website.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div classes={[ css.column ]}>
             <div>
               <input
                 placeholder="Your email"
