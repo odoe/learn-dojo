@@ -110,7 +110,7 @@ In order to export this widget as a web component, I only need to update the `.d
 }
 ```
 
-This will create a web component, that I could use like this.
+When I run `dojo build widget`, this will create a web component, that I could use anywhere like this.
 
 ```html
 <!DOCTYPE html>
@@ -132,7 +132,7 @@ This will create a web component, that I could use like this.
 
 ## Interactivity
 
-Maybe I want to make this little widget and web component interactive. For example, I want to provide a property to make the text hidden and show it when I click on the icon of the my widget. I can update my widget like this.
+Maybe I want to make this little widget and web component interactive. For example, I want to provide a property to make the text hidden and show it when I click on the icon of my widget. I can update my widget like this.
 
 ```tsx
 import { create, tsx } from "@dojo/framework/core/vdom";

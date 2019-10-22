@@ -64,16 +64,20 @@ self.__precacheManifest = [
     "url": "assets/.DS_Store"
   },
   {
-    "revision": "e7a9377c6f638f0afae5fba631565f43",
-    "url": "assets/blog/building-a-simple-app-in-dojo.jpg"
-  },
-  {
     "revision": "194577a7e20bdcc7afbb718f502c134c",
     "url": "assets/blog/.DS_Store"
   },
   {
+    "revision": "e7a9377c6f638f0afae5fba631565f43",
+    "url": "assets/blog/building-a-simple-app-in-dojo.jpg"
+  },
+  {
     "revision": "42e75a4a6c24f0d0e5c194529bc6ca5d",
     "url": "assets/blog/building-static-site-with-dojo.jpg"
+  },
+  {
+    "revision": "e693fc7546b6bc622c16399a198d2961",
+    "url": "assets/blog/build-time-rendering-in-dojo.jpg"
   },
   {
     "revision": "06c54d0e253974d871a6b87bb92e8b09",
@@ -88,56 +92,44 @@ self.__precacheManifest = [
     "url": "assets/blog/dojo-btr-built.png"
   },
   {
-    "revision": "b23f1e5310f3d48b11333096d029ffa7",
-    "url": "assets/blog/datepicker.gif"
-  },
-  {
-    "revision": "e693fc7546b6bc622c16399a198d2961",
-    "url": "assets/blog/build-time-rendering-in-dojo.jpg"
+    "revision": "2de781b06aa4af70f323b37cee1e4940",
+    "url": "assets/blog/dojo-cli-template-app.jpg"
   },
   {
     "revision": "ca32ee7cab9885e52518252d23a40f06",
     "url": "assets/blog/dojo-custom-middleware.jpg"
   },
   {
-    "revision": "2de781b06aa4af70f323b37cee1e4940",
-    "url": "assets/blog/dojo-cli-template-app.jpg"
+    "revision": "4d90d0512340f0c25ba0356fc2942725",
+    "url": "assets/blog/dojo-from-the-blocks.jpg"
   },
   {
     "revision": "5fedaf85cc9a7891017e6ae751104b40",
     "url": "assets/blog/dojo-graphql.jpg"
   },
   {
-    "revision": "1582b1285a81a969ed0de4f05c399c77",
-    "url": "assets/blog/dojo-cli.png"
-  },
-  {
-    "revision": "1709341f7275d94d4d1e68c4d6b3dd38",
-    "url": "assets/blog/dojo-web-components-revisited.jpg"
-  },
-  {
-    "revision": "4d90d0512340f0c25ba0356fc2942725",
-    "url": "assets/blog/dojo-from-the-blocks.jpg"
-  },
-  {
-    "revision": "e1d00a08164660ddbf73460373992373",
-    "url": "assets/blog/dojo-containers.jpg"
+    "revision": "b23f1e5310f3d48b11333096d029ffa7",
+    "url": "assets/blog/datepicker.gif"
   },
   {
     "revision": "4ebc0afd28c352b112c67e624d5bfb55",
     "url": "assets/blog/dojo-process-middleware.jpg"
   },
   {
-    "revision": "7b2cd0495c138b2c82db6ce107080849",
-    "url": "assets/blog/dojo2.gif"
+    "revision": "00ef360f525e7d5b9883b3be118745c4",
+    "url": "assets/blog/dojo-migrate-dojo6.jpg"
+  },
+  {
+    "revision": "1709341f7275d94d4d1e68c4d6b3dd38",
+    "url": "assets/blog/dojo-web-components-revisited.jpg"
   },
   {
     "revision": "59fde7829ffdbd9d517244a967d18880",
     "url": "assets/blog/dojo-theme-middleware.jpg"
   },
   {
-    "revision": "73fecf6c6b99acdbb11526453352126a",
-    "url": "assets/blog/intro-to-the-dojo-router.jpg"
+    "revision": "7b2cd0495c138b2c82db6ce107080849",
+    "url": "assets/blog/dojo2.gif"
   },
   {
     "revision": "2f7636a1757f8c1934c5d704071d1175",
@@ -148,20 +140,24 @@ self.__precacheManifest = [
     "url": "assets/blog/intro-to-the-dojo-registry.jpg"
   },
   {
-    "revision": "d0032da17d2cca926e022d5042a7f475",
-    "url": "assets/blog/maintain-state-with-dojo-stores.jpg"
+    "revision": "59c1e50120c68da492ec1cb76073d1ec",
+    "url": "assets/blog/style-dojo-widgets.jpg"
+  },
+  {
+    "revision": "e1d00a08164660ddbf73460373992373",
+    "url": "assets/blog/dojo-containers.jpg"
+  },
+  {
+    "revision": "1517543a5fdbc68bab93e8ccd9340f51",
+    "url": "assets/blog/tes-results.png"
   },
   {
     "revision": "2e367bd333e169f0d1bf6cfba1d4f80a",
     "url": "assets/blog/test-structure.png"
   },
   {
-    "revision": "59c1e50120c68da492ec1cb76073d1ec",
-    "url": "assets/blog/style-dojo-widgets.jpg"
-  },
-  {
-    "revision": "1517543a5fdbc68bab93e8ccd9340f51",
-    "url": "assets/blog/tes-results.png"
+    "revision": "73fecf6c6b99acdbb11526453352126a",
+    "url": "assets/blog/intro-to-the-dojo-router.jpg"
   },
   {
     "revision": "11a430ca40e1e930625499298bcaa38e",
@@ -172,12 +168,20 @@ self.__precacheManifest = [
     "url": "assets/blog/up-and-running-with-dojo-cli.jpg"
   },
   {
-    "revision": "451f1ba89fbab8aa00c9c40c0111ebaa",
-    "url": "assets/blog/watch-for-property-changes-in-widgets.jpg"
+    "revision": "93754898b9a00c5e485fa635d6e73c4a",
+    "url": "assets/blog/web-components-with-dojo.jpg"
   },
   {
     "revision": "9aaa844f890982ab370b627daa158e49",
     "url": "assets/favicon.ico"
+  },
+  {
+    "revision": "b857765b267a181908659512263302e5",
+    "url": "assets/images/.DS_Store"
+  },
+  {
+    "revision": "451f1ba89fbab8aa00c9c40c0111ebaa",
+    "url": "assets/blog/watch-for-property-changes-in-widgets.jpg"
   },
   {
     "revision": "194577a7e20bdcc7afbb718f502c134c",
@@ -188,24 +192,20 @@ self.__precacheManifest = [
     "url": "assets/images/dojo-process-middleware/middleware-flow.png"
   },
   {
+    "revision": "ba33e90dba3e220a58ccf2f8f3c56c56",
+    "url": "assets/images/learn-dojo-jumbotron.jpg"
+  },
+  {
+    "revision": "1582b1285a81a969ed0de4f05c399c77",
+    "url": "assets/blog/dojo-cli.png"
+  },
+  {
     "revision": "91175f18a4c1722897fe50a0a9f1ac87",
     "url": "assets/images/web-components-with-dojo-revisited/dojo-geolocate.png"
   },
   {
-    "revision": "93754898b9a00c5e485fa635d6e73c4a",
-    "url": "assets/blog/web-components-with-dojo.jpg"
-  },
-  {
-    "revision": "00ef360f525e7d5b9883b3be118745c4",
-    "url": "assets/blog/dojo-migrate-dojo6.jpg"
-  },
-  {
-    "revision": "b857765b267a181908659512263302e5",
-    "url": "assets/images/.DS_Store"
-  },
-  {
-    "revision": "ba33e90dba3e220a58ccf2f8f3c56c56",
-    "url": "assets/images/learn-dojo-jumbotron.jpg"
+    "revision": "d0032da17d2cca926e022d5042a7f475",
+    "url": "assets/blog/maintain-state-with-dojo-stores.jpg"
   },
   {
     "revision": "b5c7dd07befb6beac36bc7c2a38ae5f5",
