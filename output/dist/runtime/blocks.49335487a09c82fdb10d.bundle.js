@@ -9,6 +9,7 @@
 (window.dojoWebpackJsonplearn_dojo=window.dojoWebpackJsonplearn_dojo||[]).push([["runtime/blocks"],{13:function(o,d,n){window.blockCacheEntry=function(o,d,i){window.__dojoBuildBridgeCache=window.__dojoBuildBridgeCache||{},window.__dojoBuildBridgeCache[o]=window.__dojoBuildBridgeCache[o]||{},window.__dojoBuildBridgeCache[o][d]=function(){return n.e(i).then(n.bind(null,i+".js")).then(function(o){return o.default})}};
 /** @preserve APPEND_BLOCK_CACHE_ENTRY **/
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"web-components-with-dojo.md"}]', 'runtime/block-8bfcae4b68067ad197c3')
+blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"web-components-with-dojo-revisted.md"}]', 'runtime/block-676bdd22063af2690d93')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"watch-for-property-changes-in-widgets.md"}]', 'runtime/block-fbd6aa0e52add953602a')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"up-and-running-with-dojo-cli.md"}]', 'runtime/block-e610f699987ca68c8d07')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"testing-with-dojo.md"}]', 'runtime/block-67b9bcc7290ea4900c26')
@@ -30,4 +31,4 @@ blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"building-static
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"building-a-simple-app-in-dojo.md"}]', 'runtime/block-ef577078faadc6e736e0')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"build-time-rendering-in-dojo.md"}]', 'runtime/block-819f141f3ee96f84bdc1')
 blockCacheEntry('src/blocks/compile-blog-index.block', '[{}]', 'runtime/block-c1325f13fa4400d4e34d')}}]);
-//# sourceMappingURL=blocks.ea6e1de1b46c50a0f5d4.bundle.js.map
+//# sourceMappingURL=blocks.49335487a09c82fdb10d.bundle.js.map
