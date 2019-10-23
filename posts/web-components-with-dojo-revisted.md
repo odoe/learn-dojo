@@ -12,7 +12,7 @@ In a previous post, we looked at how you could [export Dojo widgets to Web Compo
 
 ## Widget
 
-In our post on [custom widget middlware](https://learn-dojo.com/dojo-custom-middleware), we created a geolocation widget. Here is what the middleware looked like.
+In our post on [custom widget middleware](https://learn-dojo.com/dojo-custom-middleware), we created a geolocation widget. Here is what the middleware looked like.
 
 ```ts
 // src/middleware/geolocation.ts
@@ -144,11 +144,11 @@ import geolocation from "../middleware/geolocation";
 import * as css from "./styles/Geolocate.m.css";
 
 // provide an interface
-interface GeolcateProperties {
+interface GeolocateProperties {
   hidden?: boolean;
 }
 
-const factory = create({ geolocation, icache }).properties<GeolcateProperties>();
+const factory = create({ geolocation, icache }).properties<GeolocateProperties>();
 
 const Geolocate = factory(function ({ middleware: { geolocation, icache }, properties }) {
   // this will be a user provided property
