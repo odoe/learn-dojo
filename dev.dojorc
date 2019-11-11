@@ -3,6 +3,7 @@
     "build-time-render": {
       "root": "root",
       "paths": [
+        "build-movie-app-with-dojo",
         "build-time-rendering-in-dojo",
         "building-a-simple-app-in-dojo",
         "building-static-site-with-dojo",

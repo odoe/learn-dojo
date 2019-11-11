@@ -1,14 +1,14 @@
 ---
 title: Build a movie search app with Dojo
-date: 2019-11-10
+date: 2019-11-11
 author: Rene Rubalcava
 description: A walkthrough on how to build a movie search application with Dojo
 tags: javascript, dojo, webdev, application, dojo6
-cover_image: /assets/blog/image.jpg
-published: false
+cover_image: /assets/blog/dojo-movie-search-app.jpg
+published: true
 ---
 
-I wanted to share with others how to build useful applications with Dojo. I was recently reading this [blog post](https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/) on building a movie search app with React hooks, and thought it was a pretty good candidate for building a Dojo app.
+I was recently reading this [blog post](https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/) on building a movie search app with React hooks, and thought it was a pretty good candidate for building a Dojo app.
 
 For this application, we'll be using the [OMDb API](https://www.omdbapi.com/) where you can also sign up for a free API key.
 
@@ -16,11 +16,11 @@ For this application, we'll be using the [OMDb API](https://www.omdbapi.com/) wh
 
 We can start with a basic dojo template app.
 
-```sh
+```bash
 dojo create app --name movie-search
 ```
 
-Go ahead and remove routes and widgets you get by default. This application will contain three distinct pieces, a `Header`, a `Search` tool, and a `Movie` card.
+Go ahead and remove the routes and the widgets you get by default. This application will contain three distinct elements, a `Header`, a `Search` tool, and a `Movie` card.
 
 ## Data
 
@@ -37,7 +37,7 @@ export interface Record {
 }
 ```
 
-I'll refer to it as a `Record`. The `State` of my application will contain an array of `Record` values and a `loading` property.
+We'll refer to it as a `Record`. The `State` of my application will contain an array of `Record` values and a `loading` property.
 
 ```ts
 // src/Data.ts
@@ -48,8 +48,6 @@ export interface State {
 ```
 
 Awesome, now that we know what kind of interfaces we'll be working with, we can start on writing some widgets.
-
-We can start with the simplest one.
 
 ## Header
 
@@ -81,7 +79,7 @@ This widget contains no internal state, so it will just take a `title` property 
 
 ## Movie
 
-The next widget we can make will be the `Movie` card. The application will display a series of movie cards and we _could_ make an entire widget to encapsulate the movies, but we'll stick a simple list of cards.
+The next widget we can make will be the `Movie` card. The application will display a series of movie cards. We _could_ make an entire widget to encapsulate the movies, but we'll stick with a simple list of cards.
 
 ```tsx
 // src/widgets/Movie.tsx
@@ -120,7 +118,7 @@ Before we start on our `Search` widget, let's build our search functionality.
 
 ## Stores and Processes
 
-In Dojo, we'll want to inject our `store` as middleware, so let's make a helper for that.
+In Dojo, we'll want to provide our `store` as middleware in our widgets, so let's make a helper for that.
 
 ```ts
 // src/middleware/store.ts
@@ -196,13 +194,13 @@ export const fetchMovies = createProcess(
 );
 ```
 
-This process is going to search for movies from OMDb API and then update the results using `return [replace(path("movies"), json.Search)]`. This will update the `movies` value of our application state with our search results.
+This process is going to search for movies from the OMDb API and then update the results using `return [replace(path("movies"), json.Search)]`. This will update the `movies` value of our application state with our search results.
 
-With the store and process complete, we can beging writing our `Search` widget to perform the all too important task of actually searching for movies.
+With the store and process complete, we can beging writing our `Search` widget to perform the important task of actually searching for movies.
 
 ## Search
 
-The `Search` widget will have some internal state to manage the word or words being searched for, so we will use the [icache](https://dojo.io/learn/middleware/available-middleware#icache) middleware.
+The `Search` widget will have some internal state to manage the search phrases, so we will use the [icache](https://dojo.io/learn/middleware/available-middleware#icache) middleware.
 
 ```tsx
 // src/widgets/Search.tsx
@@ -300,7 +298,7 @@ export const App = factory(function App({ middleware: { store } }) {
 });
 ```
 
-In the `App` widget, we are going to request movies if needed and then quickly display some loading text if the application currently fetching results. If we have some movie results, we can map over those results and create a `Movie` card for each one.
+In the `App` widget, we are going to request movies if needed and then quickly display some loading text if the application is currently fetching results. If we have some movie results, we can map over those results and create a `Movie` card for each one.
 
 From here, we can render our application in our `main` file.
 
@@ -320,4 +318,4 @@ Your completed application should look like this.
 
 ## Summary
 
-I had a lot of fun putting this little movie search application together. I think the power of building applications like this is that the processes can be very flexible. As usual, keep the actual widgets as simple as possible and we can make some really cool applications!
+I had a lot of fun putting this little movie search application together. Processes and Stores can be very flexible to fetch and transform data, as well as manage various states while loading data. As usual, keep the actual widgets as simple as possible and we can make some really cool applications!

@@ -30,5 +30,6 @@ blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"creating-a-date
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"building-static-site-with-dojo.md"}]', 'runtime/block-b51c4a39d00a61c74233')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"building-a-simple-app-in-dojo.md"}]', 'runtime/block-ef577078faadc6e736e0')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"build-time-rendering-in-dojo.md"}]', 'runtime/block-819f141f3ee96f84bdc1')
+blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"build-movie-app-with-dojo.md"}]', 'runtime/block-047e91de66c854f13bd0')
 blockCacheEntry('src/blocks/compile-blog-index.block', '[{}]', 'runtime/block-c1325f13fa4400d4e34d')}}]);
 //# sourceMappingURL=blocks.49335487a09c82fdb10d.bundle.js.map

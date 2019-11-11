@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-10-23T13:57:55.135Z</updated>
+    <updated>2019-11-11T15:51:37.005Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -14,6 +14,19 @@
     <subtitle>Learn Dojo, byte by byte</subtitle>
     <icon>https://learn-dojo.com/favicon.ico</icon>
     <rights>All rights reserved 2019, odoenet</rights>
+    <entry>
+        <title type="html"><![CDATA[Build a movie search app with Dojo]]></title>
+        <id>https://learn-dojo.com/build-movie-app-with-dojo</id>
+        <link href="https://learn-dojo.com/build-movie-app-with-dojo"/>
+        <updated>2019-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A walkthrough on how to build a movie search application with Dojo]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2019-11-11T00:00:00.000Z</published>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Building a static site with dojo]]></title>
         <id>https://learn-dojo.com/building-static-site-with-dojo</id>
