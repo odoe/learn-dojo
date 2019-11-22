@@ -18,6 +18,7 @@ blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"migrating-to-do
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"maintain-state-with-dojo-stores.md"}]', 'runtime/block-54e22e9f85d13bff2a1b')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"intro-to-the-dojo-router.md"}]', 'runtime/block-06b8b2b7716083e48e96')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"intro-to-the-dojo-registry.md"}]', 'runtime/block-baf3afd6d066dbbb3dd1')
+blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"intersection-observer.md"}]', 'runtime/block-26b0092abceca69763f6')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"dojo-widget-middleware.md"}]', 'runtime/block-13081e6b532a06888314')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"dojo-theme-middleware.md"}]', 'runtime/block-2602c37261a06201c9b9')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"dojo-process-middleware.md"}]', 'runtime/block-13f09e11881a609f0e23')

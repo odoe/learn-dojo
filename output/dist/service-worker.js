@@ -15,7 +15,7 @@ importScripts("workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "workbox-v3.6.3"});
 
 importScripts(
-  "precache-manifest.21ca2449adb4f66fc28dd9d0308f5319.js"
+  "precache-manifest.9cf2603155032a3394336f97d9303387.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "learn-dojo"});

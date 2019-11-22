@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-11-11T15:51:37.005Z</updated>
+    <updated>2019-11-22T16:43:41.491Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -104,6 +104,19 @@
             <uri/>
         </author>
         <published>2019-09-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intersection Observer with Dojo]]></title>
+        <id>https://learn-dojo.com/intersection-observer</id>
+        <link href="https://learn-dojo.com/intersection-observer"/>
+        <updated>2019-11-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how to use the Intersection Observer middleware in your Dojo applications]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2019-11-22T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[Migrating learn-dojo to Dojo 6]]></title>

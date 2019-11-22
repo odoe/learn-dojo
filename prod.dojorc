@@ -16,6 +16,7 @@
         "dojo-process-middleware",
         "dojo-theme-middleware",
         "dojo-widget-middleware",
+        "intersection-observer",
         "intro-to-the-dojo-registry",
         "intro-to-the-dojo-router",
         "maintain-state-with-dojo-stores",
