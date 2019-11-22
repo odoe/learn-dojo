@@ -16,7 +16,7 @@ The loading of more content as a user scrolls the page is interesting. You might
 
 Dojo provides an [intersection middleware](https://dojo.io/learn/middleware/available-middleware#intersection) you can use in building widgets for your application. You can use this middleware to lazy-load images or even integrate paging into your application!
 
-In a previous post, we built a [movie application](https://learn-dojo.com/build-movie-app-with-dojo/) with Dojo. For this application we use the [OMDb API]([https://www.omdbapi.com/](https://www.omdbapi.com/) which also includes the ability to page through results. So we can go ahead and add paging to this application using the Intersection Observer middleware.
+In a previous post, we built a [movie application](https://learn-dojo.com/build-movie-app-with-dojo/) with Dojo. For this application we use the [OMDb API](https://www.omdbapi.com/) which also includes the ability to page through results. So we can go ahead and add paging to this application using the Intersection Observer middleware.
 
 Since we're going to introduce paging into our application, we're going to modify our State interface to handle it.
 

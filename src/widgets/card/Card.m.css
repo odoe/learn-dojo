@@ -8,6 +8,14 @@
 	padding: 20px;
 }
 
+.link {
+  color: #003866;
+}
+
+.link:visited {
+  color: #003866;
+}
+
 .image {
 	max-height: 175px;
 	width: 100%;

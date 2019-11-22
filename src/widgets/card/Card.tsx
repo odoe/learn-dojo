@@ -34,6 +34,7 @@ export default factory(({ properties, middleware: { icache, intersection } }) =>
     <section classes={[ css.root ]} key={key}>
       <div classes={[ css.column ]}>
         <Link
+          classes={[css.link]}
           to="blog"
           params={{
             path: path.replace('posts/', '').replace('.md', '')
@@ -46,6 +47,7 @@ export default factory(({ properties, middleware: { icache, intersection } }) =>
       </div>
       <div classes={[ css.column ]}>
         <Link
+          classes={[css.link]}
           to="blog"
           params={{
             path: path.replace('posts/', '').replace('.md', '')

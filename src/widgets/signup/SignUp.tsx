@@ -24,6 +24,7 @@ export default factory(() => (
               <strong>Subscribe to newsletter</strong>
             </h3>
             <div>
+              <label for="EMAIL">Your email</label>
               <input
                 placeholder="Your email"
                 type="email"
@@ -34,6 +35,7 @@ export default factory(() => (
               />
             </div>
             <div>
+              <label for="FNAME">Your first name</label>
               <input
                 placeholder="Your first name"
                 type="text"
