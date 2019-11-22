@@ -1,4 +1,6 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
+import icache from '@dojo/framework/core/middleware/icache';
+import intersection from '@dojo/framework/core/middleware/intersection';
 
 import Link from '@dojo/framework/routing/Link';
 
@@ -15,12 +17,21 @@ interface CardProperties {
 	path: string;
 }
 
-const factory = create().properties<CardProperties>();
+const factory = create({ icache, intersection }).properties<CardProperties>();
 
-export default factory(({ properties }) => {
+const FALLBACK_IMG = '/assets/blog/fallback.jpg';
+
+export default factory(({ properties, middleware: { icache, intersection } }) => {
   const { title, date, description, path, cover_image } = properties();
+  const key = `$intersect-${title.replace(' ', '-')}`;
+  const { isIntersecting } = intersection.get(key);
+  const viewed = icache.getOrSet('viewed', false);
+  const imgSrc = (isIntersecting || viewed) ? cover_image : FALLBACK_IMG;
+  if (isIntersecting) {
+    icache.set('viewed', true);
+  }
   return (
-    <section classes={[ css.root ]}>
+    <section classes={[ css.root ]} key={key}>
       <div classes={[ css.column ]}>
         <Link
           to="blog"
@@ -40,7 +51,7 @@ export default factory(({ properties }) => {
             path: path.replace('posts/', '').replace('.md', '')
           }}
         >
-          <img alt={description} loading="lazy" classes={[ css.image ]} src={cover_image} />
+          <img alt={description} loading="lazy" classes={[ css.image ]} src={imgSrc} />
         </Link>
       </div>
     </section>
