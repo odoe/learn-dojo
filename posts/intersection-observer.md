@@ -10,7 +10,7 @@ published: true
 
 The [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) is a web API that provides information about elements position in a viewport of your page. You can check if an element is currently intersecting with the viewport, meaning it's visible in the browser and even how much of the element is visible. This gives you the tools to do things like lazy-load images on the page, determine if you want to show other parts of the page as users reach the end or load more content as a user scrolls the page.
 
-The loading of more content as a user scrolls the page is interesting. You might need to display a very large dataset to your users, but there is no point in fetching and displaying the entire dataset if the user may not access it all.
+Loading of more content as a user scrolls the page has some great benefits. You might need to display a very large dataset to your users, but there is no point in fetching and displaying all the data if the user may not scroll to it.
 
 ## Intersection Middleware
 
