@@ -6,19 +6,21 @@ import * as css from './Footer.m.css';
 import { FooterLink } from '../../interfaces';
 
 interface FooterProperties {
-	footerLinks: FooterLink[];
-	author: string;
+  footerLinks: FooterLink[];
+  author: string;
 }
 
 const dateFormatter = new Intl.DateTimeFormat('en-US');
 
 function createLinks(links: FooterLink[]) {
-	return links.map(({ href, text }) => [
-		<a key={href} href={href} target="_blank">
-			{text}
-		</a>,
-		<br />
-	]);
+  return links.map(({ href, text, logo }) => (
+    <virtual>
+      <a classes={[css.link]} key={href} href={href} target="_blank">
+        {logo ? <img classes={[css.logo]} key={logo} src={logo}></img> : text}
+      </a>
+      <br />
+    </virtual>
+  ));
 }
 
 const factory = create().properties<FooterProperties>();

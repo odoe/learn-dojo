@@ -8,3 +8,15 @@
 .details {
 	font-size: 0.75rem;
 }
+
+.logo {
+	max-height: 32px;
+}
+
+.link {
+  color: #003866;
+}
+
+.link:visited {
+  color: #003866;
+}

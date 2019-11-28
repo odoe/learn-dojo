@@ -8,11 +8,13 @@ export const meta: SiteMeta = {
 	footerLinks: [
 		{
 			href: 'https://github.com/odoe/learn-dojo',
-			text: 'github'
-    },
+			text: 'github',
+			logo: '/assets/images/logos/GitHub-Mark-32px.png'
+		},
 		{
 			href: 'https://www.youtube.com/channel/UCTMyJW_31j2hyZGKJpddgaQ',
-			text: 'youtube'
+			text: 'youtube',
+			logo: '/assets/images/logos/yt_logo_mono_light_32px.png'
 		},
 		{
 			href: 'https://dojo.io/',

@@ -1,6 +1,7 @@
 interface FooterLink {
 	href: string;
 	text: string;
+	logo?: string;
 }
 
 export interface SiteMeta {
