@@ -8,7 +8,7 @@ cover_image: /assets/blog/dojo-i18n-intro.jpg
 published: true
 ---
 
-If you are building an application that is meant to have an wide user base, one of things you should spend time on is [internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization). Chances are that you will want to support multiple languages based on where your application is used or possibly as a user preference.
+If you are building an application that is meant to have a wide user base, one of the things you should spend time on is [internationalization](https://en.wikipedia.org/wiki/Internationalization_and_localization). Chances are that you will want to support multiple languages based on where your application is used or possibly as a user preference.
 
 Dojo provides [i18n support](https://dojo.io/learn/i18n/introduction) as well as advanced [CLDR formatting](https://dojo.io/learn/i18n/advanced-formatting-cldr).
 
@@ -37,7 +37,7 @@ export default {
 };
 ```
 
-The structure of these files is that the default language file, which in this case will be english has a `messages` property. We have a `title` of `Hello`. Under the `locales` option, we can dynamically import the spanish strings for our language file. This will replace any message keys with matching keys from the imported file.
+The structure of these files is that the default language file, which in this case will be english, has a `messages` property. We have a `title` of `Hello`. Under the `locales` option, we can dynamically import the spanish strings for our language file. This will replace any message keys with matching keys from the imported file.
 
 The supported language files are just objects with the keys that are mapped to the translated strings.
 
@@ -185,7 +185,7 @@ We can see what this looks like here.
 
 !(https://codesandbox.io/embed/dojo-i18n-v6-j3pbj?fontsize=14&hidenavigation=1&theme=light)
 
-One thing I should point out, when building our application, make sure ou listyour locales in our `.dojorc` so that Dojo can build our language bundles for us.
+One thing I should point out, when building our application, make sure we list our locales in the `.dojorc` so that Dojo can build our language bundles for us.
 
 ```json
 {
@@ -198,4 +198,4 @@ One thing I should point out, when building our application, make sure ou listyo
 
 ## Summary
 
-Providing support for multiple languages in our applications isn't something many developers are concerned about right away, _until we have to!_ It's nice to be able to lean on the framework tools to do tasks like this. We don't have to worry about finding a well supported library, comparing features or developer experience. Dojo i18n isn't just limited to language support for strings, but also provides [advanced formatting](https://dojo.io/learn/i18n/advanced-formatting-cldr) support for pluralization, dates, numbers, time zones and more. So we know when we need it, Dojo has us covered!
+Providing support for multiple languages in our applications isn't something many developers are concerned about right away, _until we have to!_ It's nice to be able to lean on the framework tools to do tasks like this. We don't have to worry about finding a well supported library, comparing features or developer ergonomics. Dojo i18n isn't just limited to language support for strings, but also provides [advanced formatting](https://dojo.io/learn/i18n/advanced-formatting-cldr) support for pluralization, dates, numbers, time zones and more. So we know when we need it, Dojo has us covered!
