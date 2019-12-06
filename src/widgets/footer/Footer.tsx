@@ -14,12 +14,9 @@ const dateFormatter = new Intl.DateTimeFormat('en-US');
 
 function createLinks(links: FooterLink[]) {
   return links.map(({ href, text, logo }) => (
-    <virtual>
-      <a classes={[css.link]} key={href} href={href} target="_blank">
-        {logo ? <img classes={[css.logo]} key={logo} src={logo}></img> : text}
-      </a>
-      <br />
-    </virtual>
+    <a classes={[css.link]} key={href} href={href} target="_blank">
+      {logo ? <img classes={[css.logo]} key={logo} src={logo}></img> : <virtual><br />{text}</virtual>}
+    </a>
   ));
 }
 
@@ -37,12 +34,14 @@ export default factory(({ properties }) => {
     <footer key="footer" classes={[css.root]}>
       <span>&copy; {`${d.getFullYear()}, ${name}`}</span>
       <br />
+      <div>
       {links}
-      <a href="/atom.xml">rss feed</a>
+      </div>
       <br />
       <span classes={[css.details]} key="footer">
         Last build: {`${buildTime}`}
       </span>
+      <br />
     </footer>
   );
 });

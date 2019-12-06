@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2019-11-27T21:00:15.423Z</updated>
+    <updated>2019-12-06T18:46:35.914Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -117,6 +117,19 @@
             <uri/>
         </author>
         <published>2019-11-22T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intro to i18n with Dojo]]></title>
+        <id>https://learn-dojo.com/intro-dojo-i18n</id>
+        <link href="https://learn-dojo.com/intro-dojo-i18n"/>
+        <updated>2019-12-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Learn how to use i18n with Dojo applications]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2019-12-06T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[Migrating learn-dojo to Dojo 6]]></title>
