@@ -49,6 +49,7 @@ export default factory(({ properties, middleware: { icache, intersection } }) =>
         <Link
           classes={[css.link]}
           to="blog"
+          aria-label={description}
           params={{
             path: path.replace('posts/', '').replace('.md', '')
           }}

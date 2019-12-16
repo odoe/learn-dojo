@@ -14,8 +14,8 @@ const dateFormatter = new Intl.DateTimeFormat('en-US');
 
 function createLinks(links: FooterLink[]) {
   return links.map(({ href, text, logo }) => (
-    <a classes={[css.link]} key={href} href={href} target="_blank">
-      {logo ? <img classes={[css.logo]} key={logo} src={logo}></img> : <virtual><br />{text}</virtual>}
+    <a classes={[css.link]} key={href} href={href} rel="noopener noreferrer" target="_blank" aria-label={text}>
+      {logo ? <img classes={[css.logo]} key={logo} src={logo} alt={text}></img> : <virtual><br />{text}</virtual>}
     </a>
   ));
 }

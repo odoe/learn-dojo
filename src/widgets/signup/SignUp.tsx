@@ -24,7 +24,7 @@ export default factory(() => (
               <strong>Subscribe to newsletter</strong>
             </h3>
             <div>
-              <label for="EMAIL">Your email</label>
+              <label for="mce-EMAIL">Your email</label>
               <input
                 placeholder="Your email"
                 type="email"
@@ -35,7 +35,7 @@ export default factory(() => (
               />
             </div>
             <div>
-              <label for="FNAME">Your first name</label>
+              <label for="mce-FNAME">Your first name</label>
               <input
                 placeholder="Your first name"
                 type="text"
@@ -51,7 +51,7 @@ export default factory(() => (
                 We use Mailchimp as our marketing platform. By clicking below to subscribe, you
                 acknowledge that your information will be transferred to Mailchimp for
                 processing.{' '}
-                <a href="https://mailchimp.com/legal/" target="_blank">
+                <a classes={[css.link]} href="https://mailchimp.com/legal/" rel="noopener noreferrer" target="_blank" aria-label="Learn more about Mailchimp's privacy practices here">
                   Learn more about Mailchimp's privacy practices here.
                 </a>
               </p>
