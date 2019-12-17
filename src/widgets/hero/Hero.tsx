@@ -1,4 +1,5 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
+
 import * as css from './Hero.m.css';
 
 const factory = create().properties<{ description: string }>();
