@@ -1,5 +1,8 @@
 {
   "build-app": {
+    "bundles": {
+      "blog": "src/pages/Blog"
+    },
     "build-time-render": {
       "root": "root",
       "renderer": "jsdom",
