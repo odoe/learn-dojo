@@ -28,7 +28,11 @@ export default factory(({ middleware: { block }, properties }) => {
     const date = dateFormatter(new Date(post.meta.date));
     return (
       <section>
-        <img src={post.meta.cover_image} key={`cover-image-${post.meta.title}`} alt={post.meta.title} loading="lazy" />
+        <picture>
+          <source type="image/webp" srcset={post.meta.cover_image.replace(/\.(jpg|png)/, '.webp')}/>
+          <source type="image/jpeg" srcset={post.meta.cover_image}/>
+          <img src={post.meta.cover_image} key={`cover-image-${post.meta.title}`} alt={post.meta.title} loading="lazy" />
+        </picture>
         <Article key={post.meta.title}>
           <Link
             to="blog"

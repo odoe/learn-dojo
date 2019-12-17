@@ -12,10 +12,20 @@ interface FooterProperties {
 
 const dateFormatter = new Intl.DateTimeFormat('en-US');
 
+function asImage({logo, text}: Pick<FooterLink, 'logo' | 'text'>) {
+  return (
+    <picture>
+      <source type="image/webp" srcset={logo?.replace(/\.(jpg|png)/, '.webp')}/>
+      <source type="image/jpeg" srcset={logo}/>
+      <img alt={text} loading="lazy" classes={[ css.logo ]} src={logo} />
+    </picture>
+  );
+}
+
 function createLinks(links: FooterLink[]) {
   return links.map(({ href, text, logo }) => (
     <a classes={[css.link]} key={href} href={href} rel="noopener noreferrer" target="_blank" aria-label={text}>
-      {logo ? <img classes={[css.logo]} key={logo} src={logo} alt={text}></img> : <virtual><br />{text}</virtual>}
+      {logo ? asImage({logo, text}) : <virtual><br />{text}</virtual>}
     </a>
   ));
 }

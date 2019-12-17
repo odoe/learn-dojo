@@ -1,7 +1,5 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
 
-import Button from '@dojo/widgets/button';
-
 import * as css from './SignUp.m.css';
 
 const factory = create();
@@ -45,7 +43,7 @@ export default factory(() => (
                 id="mce-FNAME"
               />
             </div>
-            <Button type="submit">Submit</Button>
+            <button classes={[css.submit]} type="submit">Subscribe</button>
             <div classes={[ css.info ]}>
               <p>
                 We use Mailchimp as our marketing platform. By clicking below to subscribe, you

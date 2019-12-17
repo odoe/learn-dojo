@@ -2,6 +2,7 @@
   "build-app": {
     "build-time-render": {
       "root": "root",
+      "renderer": "jsdom",
       "paths": [
         "build-movie-app-with-dojo",
         "build-time-rendering-in-dojo",

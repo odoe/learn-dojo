@@ -54,7 +54,11 @@ export default factory(({ properties, middleware: { icache, intersection } }) =>
             path: path.replace('posts/', '').replace('.md', '')
           }}
         >
-          <img alt={description} loading="lazy" classes={[ css.image ]} src={imgSrc} />
+          <picture>
+            <source type="image/webp" srcset={imgSrc.replace(/\.(jpg|png)/, '.webp')}/>
+            <source type="image/jpeg" srcset={imgSrc}/>
+            <img alt={description} loading="lazy" classes={[ css.image ]} src={imgSrc} />
+          </picture>
         </Link>
       </div>
     </section>

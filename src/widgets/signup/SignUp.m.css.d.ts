@@ -11,3 +11,4 @@ export const info: string;
 export const input: string;
 export const fieldset: string;
 export const link: string;
+export const submit: string;
