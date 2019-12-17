@@ -2,24 +2,19 @@
 .root {
 	width: 100vw;
 	height: 300px;
+	max-height: 300px;
 	display: flex;
+	overflow: hidden;
 	align-items: center;
 	position: relative;
 	left: 50%;
 	right: 50%;
 	margin: 0 -50vw 2rem;
 }
-
-.root:not(.webp) {
-	background: url('/assets//images/learn-dojo-jumbotron.jpg');
-	background-size: cover;
-	background-position: center;
-}
-
-.webp {
-	background: url('/assets//images/learn-dojo-jumbotron.webp');
-	background-size: cover;
-	background-position: center;
+.image {
+	width: 100vw;
+	height: 300px;
+	object-fit: cover;
 }
 
 .description {

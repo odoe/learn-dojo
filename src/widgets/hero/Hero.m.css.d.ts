@@ -1,3 +1,3 @@
 export const root: string;
-export const webp: string;
+export const image: string;
 export const description: string;
