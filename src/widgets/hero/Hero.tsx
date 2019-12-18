@@ -23,7 +23,7 @@ export default factory(({ properties }) => {
         /assets/images/learn-dojo-jumbotron-lg.jpg 768w,
         /assets/images/learn-dojo-jumbotron-xl.jpg 960w
       "/>
-      <img alt={description} loading="lazy" classes={[ css.image ]} src="/assets/images/learn-dojo-jumbotron-xl.jpg" />
+      <img alt={description} loading="lazy" classes={[ css.image ]} src="/assets/images/learn-dojo-jumbotron-lg.jpg" />
     </picture>
       <h3 classes={[css.description]}>{description}</h3>
     </div>
