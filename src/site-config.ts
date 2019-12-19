@@ -9,7 +9,7 @@ export const meta: SiteMeta = {
 		{
 			href: '/atom.xml',
 			text: 'rss feed',
-      logo: '/assets/images/logos/rss-logo-32px.png'
+			logo: '/assets/images/logos/rss-logo-32px.png'
 		},
 		{
 			href: 'https://github.com/odoe/learn-dojo',
@@ -49,4 +49,18 @@ export const remarkPlugins = [
 ];
 
 // rehype plugins with options
-export const rehypePlugins = ['@mapbox/rehype-prism', 'rehype-slug'];
+export const rehypePlugins = [
+	{
+		resolve: 'rehype-picture',
+		options: {
+			jpg: {
+				webp: 'image/webp'
+			},
+			png: {
+				webp: 'image/webp'
+			}
+		},
+	},
+	'@mapbox/rehype-prism',
+	'rehype-slug',
+];

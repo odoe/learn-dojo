@@ -108,7 +108,7 @@
 </span></code></pre>
 <p>I'm using the metadata from each blog post to create these cards. I'm using a lot of the front matter for metadata that <a href="https://dev.to" target="_blank" rel="nofollow">dev.to</a> uses, because it will make it easier for me to cross-post there as well.</p>
 <p>The result is a card that looks similar to this.</p>
-<p><img src="/assets/blog/dojo-blog-card.png" alt="dojo blog card"></p>
+<p><picture><source srcset="/assets/blog/dojo-blog-card.webp" type="image/webp"><img src="/assets/blog/dojo-blog-card.png" alt="dojo blog card"></picture></p>
 <h2 id="templates">Templates</h2>
 <p>Blog posts are represented as templates. In this case they can render in a card style for the main page or as the entire blog post. The blog post template looks like this.</p>
 <pre class="language-tsx"><code class="language-tsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">BlogPost</span> <span class="token keyword">extends</span> <span class="token class-name">WidgetBase</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PostProperties</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text"> </span><span class="token punctuation">{</span>
@@ -183,7 +183,7 @@
 </code></pre>
 <p>I'm planning on automating the updates of the <code>.dojorc</code> with a script that I can run before the build is run, but I haven't gotten that far yet.</p>
 <p>Once it's been built, the result is a static website with subdirectories to each page I've built.</p>
-<p><img src="/assets/blog/dojo-btr-built.png" alt="dojo buil time render result"></p>
+<p><picture><source srcset="/assets/blog/dojo-btr-built.webp" type="image/webp"><img src="/assets/blog/dojo-btr-built.png" alt="dojo buil time render result"></picture></p>
 <p>This means that even if someone is on a slow connection or the javascript doesn't load correctly, my site should still be visible, including the routes of my site.</p>
 <h2 id="deployment">Deployment</h2>
 <p>Since my site doesn't require making any API calls or rely on a server to do any server side rendering, it's fairly easy to deploy to any number of your favorite hosting services. For the record, I tried to deploy to <a href="https://zeit.co/" target="_blank" rel="nofollow">zeit</a> and <a href="https://www.netlify.com/" target="_blank" rel="nofollow">netlify</a> and they both appeared to work great at first. However, it looks like the subdirectories of my <code>dist</code> directory would not deploy, so links to pages other than the main page would not work. If I linked to a page from the main page, dojo routing worked fine, but not when using the URL. I'm sure I just did not configure something correctly, but it wasn't clear to me <em>what</em> I didn't do right.</p>
@@ -202,5 +202,5 @@
 	if (!window['learn_dojo']) {
 		window['learn_dojo'].publicPath = window.location.pathname.replace(/(\/)?building-static-site-with-dojo(\/)?$/, '/');
 	}
-</script><link rel="stylesheet" href="bootstrap.769ebd8fa11b99527010.bundle.css" /><link rel="preload" href="prism.1_inztFX.css" as="style"><link rel="preload" href="main.399b31987c7bc5ddcf72.bundle.css" as="style"><script src="bootstrap.d2c37690287bf586f107.bundle.js"></script><script type="text/javascript" src="runtime/block-b51c4a39d00a61c74233.ea5702758a702c8aec7a.bundle.js"></script><link rel="preload" href="runtime/blocks.49335487a09c82fdb10d.bundle.js" as="script"><link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=UA-56544808-7" as="script"><link rel="preload" href="https://www.google-analytics.com/analytics.js" as="script"><link rel="preload" href="main.e7fd3e799e2a78958daf.bundle.js" as="script"><link rel="prefetch" href="precache-manifest.bc3875114565639f0f052f8f57c5db69.js" /><link rel="prefetch" href="service-worker.js" /></body>
+</script><link rel="stylesheet" href="bootstrap.c42df1736e709d65442f.bundle.css" /><link rel="preload" href="prism.1_inztFX.css" as="style"><link rel="preload" href="main.013af170900f4e654f4c.bundle.css" as="style"><script src="bootstrap.c24a4063fae2f8e76c23.bundle.js"></script><script type="text/javascript" src="runtime/block-b51c4a39d00a61c74233.ce122a4f009abf37cfcd.bundle.js"></script><link rel="preload" href="runtime/blocks.49335487a09c82fdb10d.bundle.js" as="script"><link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=UA-56544808-7" as="script"><link rel="preload" href="https://www.google-analytics.com/analytics.js" as="script"><link rel="preload" href="main.077fba420298af2f5a23.bundle.js" as="script"><link rel="prefetch" href="precache-manifest.f06ac1c9cb08eaa0b64fffd38be95837.js" /><link rel="prefetch" href="service-worker.js" /></body>
 </html>
