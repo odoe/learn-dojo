@@ -12,16 +12,24 @@ export default factory(({ properties }) => {
       <source
         type="image/webp"
         srcset="
-        /assets/images/learn-dojo-jumbotron-md.webp 576w,
-        /assets/images/learn-dojo-jumbotron-lg.webp 768w,
-        /assets/images/learn-dojo-jumbotron-xl.webp 960w
+        /assets/images/learn-dojo-jumbotron-320.webp 320w,
+        /assets/images/learn-dojo-jumbotron-640.webp 640w,
+        /assets/images/learn-dojo-jumbotron-768.webp 768w,
+        /assets/images/learn-dojo-jumbotron-1024.webp 1024w,
+        /assets/images/learn-dojo-jumbotron-1366.webp 1366w,
+        /assets/images/learn-dojo-jumbotron-1600.webp 1600w,
+        /assets/images/learn-dojo-jumbotron-1920.webp 1920w
       "/>
       <source
         type="image/jpeg"
         srcset="
-        /assets/images/learn-dojo-jumbotron-md.jpg 576w,
-        /assets/images/learn-dojo-jumbotron-lg.jpg 768w,
-        /assets/images/learn-dojo-jumbotron-xl.jpg 960w
+        /assets/images/learn-dojo-jumbotron-320.jpg 320w,
+        /assets/images/learn-dojo-jumbotron-640.jpg 640w,
+        /assets/images/learn-dojo-jumbotron-768.jpg 768w,
+        /assets/images/learn-dojo-jumbotron-1024.jpg 1024w,
+        /assets/images/learn-dojo-jumbotron-1366.jpg 1366w,
+        /assets/images/learn-dojo-jumbotron-1600.jpg 1600w,
+        /assets/images/learn-dojo-jumbotron-1920.jpg 1920w
       "/>
       <img alt={description} loading="lazy" classes={[ css.image ]} src="/assets/images/learn-dojo-jumbotron-lg.jpg" />
     </picture>
