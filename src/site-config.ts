@@ -6,7 +6,7 @@ export const meta: SiteMeta = {
 	description: 'byte by byte',
 	footerLinks: [
 		{
-			href: 'https://learn-dojo/atom.xml',
+			href: 'https://learn-dojo.com/atom.xml',
 			text: 'rss feed',
 			logo: '/assets/images/logos/rss-logo-32px.png'
 		},
