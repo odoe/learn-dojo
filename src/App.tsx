@@ -1,5 +1,5 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
-import Outlet from '@dojo/framework/routing/Outlet';
+import Route from '@dojo/framework/routing/Route';
 
 import Blog from './pages/Blog';
 import BlogList from './blog-list/BlogList';
@@ -14,7 +14,7 @@ export default factory(({ properties }) => {
   const { siteMeta } = properties();
   return (
     <Layout { ...siteMeta}>
-      <Outlet
+      <Route
         id="blog"
         renderer={(matchDetails) => {
           const { params } = matchDetails;

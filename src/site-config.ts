@@ -7,7 +7,7 @@ export const meta: SiteMeta = {
 	description: 'byte by byte',
 	footerLinks: [
 		{
-			href: '/atom.xml',
+			href: 'https://learn-dojo/atom.xml',
 			text: 'rss feed',
 			logo: '/assets/images/logos/rss-logo-32px.png'
 		},
@@ -30,6 +30,7 @@ export const meta: SiteMeta = {
 
 export const routes: RouteConfig[] = [
 	{
+		id: 'blog',
 		path: '/{path}',
 		outlet: 'blog',
 		defaultRoute: true
