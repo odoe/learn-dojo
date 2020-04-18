@@ -3,7 +3,8 @@ import Registry from '@dojo/framework/core/Registry';
 import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
 import { StateHistory } from '@dojo/framework/routing/history/StateHistory';
 
-import { meta, routes } from './site-config';
+import { meta } from './site-config';
+import routes from './routes';
 import App from './App';
 
 const registry = new Registry();

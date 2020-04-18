@@ -1,5 +1,4 @@
 import { SiteMeta } from './interfaces';
-import { RouteConfig } from '@dojo/framework/routing/interfaces';
 
 export const meta: SiteMeta = {
 	title: 'learn dojo',
@@ -27,15 +26,6 @@ export const meta: SiteMeta = {
 		}
 	]
 };
-
-export const routes: RouteConfig[] = [
-	{
-		id: 'blog',
-		path: '/{path}',
-		outlet: 'blog',
-		defaultRoute: true
-	}
-];
 
 // -------------------------------------
 // Plugins for static site generation
