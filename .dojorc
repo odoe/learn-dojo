@@ -1,8 +1,8 @@
 {
-  "extends": "./.dojorc",
   "build-app": {
-    "bundles": {
-      "blog": ["src/pages/Blog"]
+    "build-time-render": {
+      "root": "root",
+      "renderer": "jsdom"
     },
     "pwa": {
       "manifest": {
@@ -19,18 +19,6 @@
               256,
               512
             ]
-          }
-        ]
-      },
-      "serviceWorker": {
-        "clientsClaim": true,
-        "routes": [
-          {
-            "urlPattern": ".*",
-            "strategy": "networkFirst",
-            "expiration": {
-              "maxEntries": 25
-            }
           }
         ]
       }
