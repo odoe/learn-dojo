@@ -1,5 +1,4 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
-// import theme from '@dojo/framework/core/middleware/theme';
 
 import * as css from './Article.m.css';
 
