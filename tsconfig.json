@@ -27,18 +27,12 @@
 		"downlevelIteration": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "es5",
-		"types": [
-			"intern"
-		]
+		"target": "es5"
 	},
 	"include": [
 		"./src/**/*.ts",
 		"./tests/**/*.ts",
-		"src/widgets/header/Header.tsx",
-		"src/App.tsx",
-		"src/pages/Blog.tsx",
-		"src/widgets/About.tsx",
-		"src/main.tsx"
+		"./src/**/*.tsx",
+		"./tests/**/*.tsx"
 	]
 }

@@ -1,5 +1,4 @@
 import { SiteMeta } from './interfaces';
-import { RouteConfig } from '@dojo/framework/routing/interfaces';
 
 export const meta: SiteMeta = {
 	title: 'learn dojo',
@@ -7,7 +6,7 @@ export const meta: SiteMeta = {
 	description: 'byte by byte',
 	footerLinks: [
 		{
-			href: '/atom.xml',
+			href: 'https://learn-dojo.com/atom.xml',
 			text: 'rss feed',
 			logo: '/assets/images/logos/rss-logo-32px.png'
 		},
@@ -27,14 +26,6 @@ export const meta: SiteMeta = {
 		}
 	]
 };
-
-export const routes: RouteConfig[] = [
-	{
-		path: '/{path}',
-		outlet: 'blog',
-		defaultRoute: true
-	}
-];
 
 // -------------------------------------
 // Plugins for static site generation

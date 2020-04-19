@@ -1,5 +1,4 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
-// import has from '@dojo/framework/core/has';
 
 import * as css from './Footer.m.css';
 
