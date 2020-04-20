@@ -2,7 +2,8 @@
   "build-app": {
     "build-time-render": {
       "root": "root",
-      "renderer": "jsdom"
+      "renderer": "jsdom",
+      "static": true
     },
     "pwa": {
       "manifest": {

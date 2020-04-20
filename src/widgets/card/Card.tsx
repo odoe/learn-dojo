@@ -1,7 +1,4 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
-import icache from '@dojo/framework/core/middleware/icache';
-import intersection from '@dojo/framework/core/middleware/intersection';
-
 import Link from '@dojo/framework/routing/Link';
 
 import { dateFormatter } from '../../utils/formatter';
@@ -17,19 +14,11 @@ interface CardProperties {
 	path: string;
 }
 
-const factory = create({ icache, intersection }).properties<CardProperties>();
+const factory = create().properties<CardProperties>();
 
-const FALLBACK_IMG = '/assets/blog/fallback.jpg';
-
-export default factory(({ properties, middleware: { icache, intersection } }) => {
+export default factory(({ properties }) => {
   const { title, date, description, path, cover_image } = properties();
-  const key = `$intersect-${title.replace(' ', '-')}`;
-  const { isIntersecting } = intersection.get(key);
-  const viewed = icache.getOrSet('viewed', false);
-  const imgSrc = (isIntersecting || viewed) ? cover_image : FALLBACK_IMG;
-  if (isIntersecting) {
-    icache.set('viewed', true);
-  }
+  const key = `post-${title.replace(' ', '-')}`;
   return (
     <section classes={[ css.root ]} key={key}>
       <div classes={[ css.column ]}>
@@ -55,9 +44,9 @@ export default factory(({ properties, middleware: { icache, intersection } }) =>
           }}
         >
           <picture>
-            <source type="image/webp" srcset={imgSrc.replace(/\.(jpg|png)/, '.webp')}/>
-            <source type="image/jpeg" srcset={imgSrc}/>
-            <img alt={description} loading="lazy" classes={[ css.image ]} src={imgSrc} />
+            <source type="image/webp" srcset={cover_image.replace(/\.(jpg|png)/, '.webp')}/>
+            <source type="image/jpeg" srcset={cover_image}/>
+            <img alt={description} loading="lazy" classes={[ css.image ]} src={cover_image} />
           </picture>
         </Link>
       </div>
