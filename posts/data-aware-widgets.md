@@ -8,13 +8,13 @@ cover_image: /assets/blog/image.jpg
 published: false
 ---
 
-Dojo Resources allow you to build widgets that are "data aware". Unlike some robot rising self-awareness, this one is pretty harmless, but very cool. Whereas Dojo Stores are meant to be the source of data at the application level, Dojo Resources allow you to narrow the focus to individual widgets. Since we are focusing on making thes widgets data aware, we can of course do that through a provided data middleware. What is really interesting about Resources, is that it's not only a state management tool, but also a data fetch tool, so all your data management needs are handled in a single tool.
+Dojo Resources allow you to build widgets that are "data aware". Unlike some robot uprising self-awareness, this one is pretty harmless, but very cool. Whereas Dojo Stores are meant to be the source of data at the application level, Dojo Resources allow you to narrow the focus to individual widgets. Since we are focusing on making these widgets data aware, we can of course do this the Dojo way, through a middleware. What is really interesting about Resources, is that it's not only a state management tool, but also a data fetch tool, so all your data management needs are handled in a single tool.
 
 For this demo, we're going to look at creating a very simple Hacker News feed.
 
 ## Resource Templates
 
-Resources templates decribe the various actions of a resource. There are three actions that a resource can use.
+Resources templates describe the various actions of a resource. There are three actions that a resource can have.
 
 * `read`: How the resource will fetch data. This can be a web service API, or local storage, or some other in-memory data source.
 * `find`: Similar to the `read` action, but you would use it to find a specific item from the resource.
@@ -68,7 +68,7 @@ Ok, let's talk a little bit about what is happening in the Resource.
 
 The `request` is going to provide the payload from the widget. It's going to provide a `size` and `offset` that make it easier to do pagination of your data. This is really useful for viewing large datasets in a reasonable manner. It's also going to provide the `query`, which is on object that is going to contain any query parameters you are going to use to fetch data.
 
-In this case we are using a RESTful API for the Hacker News feed, but this could easily be configured for use with a GraphQL API or in-memory data source.
+In this case we are using a RESTful API for the Hacker News feed, but this could easily be configured for use with GraphQL or in-memory data source.
 
 ## Data Aware Widget
 
@@ -90,7 +90,7 @@ interface ListState {
 }
 
 // Create a resource middleware without a item interface, which means
-// no resource property will be added to the widget's property api
+// no resource property will be added to the widgets property api
 const resource = createResourceMiddleware();
 const icache = createICacheMiddleware<ListState>();
 const factory = create({ icache, resource });
@@ -225,7 +225,7 @@ const icache = createICacheMiddleware<ListState>();
 const factory = create({ icache, resource });
 ```
 
-This pretty straight forware, the factory method will let us create widgets with local state and a resource API. Now we can move on to the widget, which will cover in sections.
+This pretty straight forward, the factory method will let us create widgets with local state and a resource API. Now we can move on to the widget, which will cover in sections.
 
 ```tsx
 const HackerNewList = factory(function HackerNewList({
@@ -252,7 +252,7 @@ const HackerNewList = factory(function HackerNewList({
 
 The `resource` middleware provides an API to interact with the resource template.
 
-* `createOptions`: This is used to create a payload specific to your widget via `createOptions(id)`, where `id` is the id of the widget. This is usefull, because you can have multiple widgets using the same resource in your application, so internally, Dojo will manage that.
+* `createOptions`: This is used to create a payload specific to your widget via `createOptions(id)`, where `id` is the id of the widget. This is useful, because you can have multiple widgets using the same resource in your application, so internally, Dojo will manage that.
 * `getOrRead`: You can use this method to request data from the resource, using the template and the options you provide it. Under the hood, this function is going to asynchronous, so there are some utility APIs you can use to determine the resource state.
 * `isLoading`: Given the template and options, it will let you know if the resource if still fetching data.
 * `isFailed`: Given the template and options, will return `true` or `false` if the resource action failed. It's in the name.
@@ -346,7 +346,7 @@ if (failed) {
 }
 ```
 
-Once we've verified that are resource hasn't errored out on us and all is right in our resource world, we can start to look at the meat of our widget.
+Once we've verified that are resource hasn't thrown an error and all is right in our resource world, we can start to look at the meat of our widget.
 
 ```tsx
 <input
@@ -374,7 +374,7 @@ Once we've verified that are resource hasn't errored out on us and all is right 
 </button>
 ```
 
-The first thing we do is update our local state for the widget. For the `oninput` event, we don't want our `icache` update to fire a rerender, because that will happen when they press Enter or the submit button. `icache` now accepts an optional third boolean argument to update with invalidating local state and preventing the widget from rerendering itself.
+The first thing we do is update our local state for the widget. For the `oninput` event, we don't want our `icache` update to fire a render, because that will happen when you press the Enter key or the submit button. `icache` now accepts an optional third boolean argument to update with invalidating local state and preventing the widget from rendering itself.
 
 ```ts
 // This will not force a rerender
@@ -436,7 +436,7 @@ Finally, we are going to iterate over the results of our resource and display th
     ))}
 ```
 
-First we check if the resouce is `loading`, and display a loading message. If the resource is done loading, we now iterate the results and pass them to a simple widget that just displays the news feed item. You might notice that we first filter the results based on a list of `readItemIds`. This is updated by a function passed to the `HackerNewsItem` widget that will mark a story as _read_, and not display it in our feed.
+First we check if the resource is `loading`, and display a loading message. If the resource is done loading, we now iterate the results and pass them to a simple widget that just displays the news feed item. You might notice that we first filter the results based on a list of `readItemIds`. This is updated by a function passed to the `HackerNewsItem` widget that will mark a story as _read_, and not display it in our feed.
 
 ```ts
 icache.set("readItemIds", (current = []) => [...current, old]);
