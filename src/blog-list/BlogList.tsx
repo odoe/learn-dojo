@@ -9,7 +9,11 @@ const factory = create({ block });
 export default factory(({ middleware: { block } }) => {
     const blogs = block(compileBlogIndex)({}) || [];
     return (
-        <virtual>
+		<virtual>
+			<head>
+				<title>learn dojo</title>
+				<meta name="description" content="learn dojo - byte by byte" />
+			</head>
             {blogs.map((blog) => <Card key={blog.file} path={blog.file} {...blog.meta} />)}
         </virtual>
     );

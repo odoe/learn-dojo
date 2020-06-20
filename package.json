@@ -12,14 +12,14 @@
 		"test:all": "dojo build --mode unit && dojo build --mode functional && dojo test --all --config local"
 	},
 	"dependencies": {
-		"@dojo/framework": "7.0.0-beta.1",
-		"@dojo/widgets": "7.0.0-alpha.4",
+		"@dojo/framework": "7.0.1",
+		"@dojo/widgets": "7.0.0",
 		"tslib": "~1.10.0"
 	},
 	"devDependencies": {
-		"@dojo/cli": "7.0.0-beta.1",
-		"@dojo/cli-build-app": "7.0.0-beta.1",
-		"@dojo/cli-test-intern": "7.0.0-beta.1",
+		"@dojo/cli": "7.0.0",
+		"@dojo/cli-build-app": "7.0.0",
+		"@dojo/cli-test-intern": "7.0.0",
 		"@mapbox/rehype-prism": "^0.3.1",
 		"@types/fs-extra": "^7.0.0",
 		"@types/node": "~12.0.2",

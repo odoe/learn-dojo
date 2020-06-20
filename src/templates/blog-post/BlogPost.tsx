@@ -16,39 +16,43 @@ export interface PostProperties {
 const factory = create({ block }).properties<PostProperties>();
 
 export default factory(({ middleware: { block }, properties }) => {
-  let { path }  = properties();
-  if (!path.includes('.md')) {
-    path = `${path}.md`;
-  }
-  const post: any = block(compileBlogPost)({
-    path
-  });
+	let { path }  = properties();
+	if (!path.includes('.md')) {
+		path = `${path}.md`;
+	}
+	const post: any = block(compileBlogPost)({
+		path
+	});
 
-  if (post) {
-    const date = dateFormatter(new Date(post.meta.date));
-    return (
-      <section>
-        <picture>
-          <source type="image/webp" srcset={post.meta.cover_image.replace(/\.(jpg|png)/, '.webp')}/>
-          <source type="image/jpeg" srcset={post.meta.cover_image}/>
-          <img src={post.meta.cover_image} key={`cover-image-${post.meta.title}`} alt={post.meta.title} loading="lazy" />
-        </picture>
-        <Article key={post.meta.title}>
-          <Link
-            to="blog"
-            aria-label={post.meta.title}
-            params={{
-              path: path.replace('posts/', '').replace('.md', '')
-            }}
-          >
-            <h2>{post.meta.title}</h2>
-          </Link>
-          <p>
-            {`${post.meta.author} | ${date}`}
-          </p>
-          {post.content}
-        </Article>
-      </section>
-    );
+	if (post) {
+		const date = dateFormatter(new Date(post.meta.date));
+		return (
+			<section>
+				<head>
+					<title>{post.meta.title}</title>
+					<meta name="description" content={post.meta.description} />
+				</head>
+				<picture>
+					<source type="image/webp" srcset={post.meta.cover_image.replace(/\.(jpg|png)/, '.webp')}/>
+					<source type="image/jpeg" srcset={post.meta.cover_image}/>
+					<img src={post.meta.cover_image} key={`cover-image-${post.meta.title}`} alt={post.meta.title} loading="lazy" />
+				</picture>
+				<Article key={post.meta.title}>
+					<Link
+						to="blog"
+						aria-label={post.meta.title}
+						params={{
+							path: path.replace('posts/', '').replace('.md', '')
+						}}
+					>
+						<h2>{post.meta.title}</h2>
+					</Link>
+					<p>
+						{`${post.meta.author} | ${date}`}
+					</p>
+					{post.content}
+				</Article>
+			</section>
+		);
   }
 });
