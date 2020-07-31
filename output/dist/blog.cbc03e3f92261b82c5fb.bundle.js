@@ -1,0 +1,11 @@
+/*!
+ * 
+ * [Dojo](https://dojo.io/)
+ * Copyright [JS Foundation](https://js.foundation/) & contributors
+ * [New BSD license](https://github.com/dojo/meta/blob/master/LICENSE)
+ * All rights reserved
+ * 
+ */
+(window.dojoWebpackJsonplearn_dojo=window.dojoWebpackJsonplearn_dojo||[]).push([["blog"],{57:function(e,t,o){e.exports={" _key":"learn-dojo/Article",root:"Article-m__root__5737d01D5nz"}},59:function(e,t,o){e.exports={" _key":"learn-dojo/Blog",root:"Blog-m__root__5737d01B0aR"}},61:function(e,t,o){"use strict";o.r(t);var a=o(22),r=o(30),c=o(26),l=o(1),i=o(0),d="src/blocks/compile-blog-post.block",j=function(){var e=Array.prototype.slice.call(arguments);
+/** @preserve {{ REPLACE }} **/if(Object(l.default)("build-time-render")&&i.default.__dojoBuildBridge)return i.default.__dojoBuildBridge(d,e);var t=JSON.stringify(e);return i.default.__dojoBuildBridgeCache&&i.default.__dojoBuildBridgeCache[d]&&i.default.__dojoBuildBridgeCache[d][t]?i.default.__dojoBuildBridgeCache[d][t]():void 0},n=o(57);var p=Object(a.a)()(({children:e})=>Object(a.j)("article",{classes:[n.root]},e())),s=o(31);var u=Object(a.a)({block:r.a}).properties()(({middleware:{block:e},properties:t})=>{let{path:o}=t();o.includes(".md")||(o=`${o}.md`);const r=e(j)({path:o});if(r){const e=Object(s.a)(new Date(r.meta.date));return Object(a.j)("section",null,Object(a.j)("head",null,Object(a.j)("title",null,r.meta.title),Object(a.j)("meta",{name:"description",content:r.meta.description})),Object(a.j)("picture",null,Object(a.j)("source",{type:"image/webp",srcset:r.meta.cover_image.replace(/\.(jpg|png)/,".webp")}),Object(a.j)("source",{type:"image/jpeg",srcset:r.meta.cover_image}),Object(a.j)("img",{src:r.meta.cover_image,key:`cover-image-${r.meta.title}`,alt:r.meta.title,loading:"lazy"})),Object(a.j)(p,{key:r.meta.title},Object(a.j)(c.a,{to:"blog","aria-label":r.meta.title,params:{path:o.replace("posts/","").replace(".md","")}},Object(a.j)("h2",null,r.meta.title)),Object(a.j)("p",null,`${r.meta.author} | ${e}`),r.content))}}),b=o(59);const m=Object(a.a)().properties();t.default=m(({properties:e})=>{const{path:t}=e();return Object(a.j)("div",{classes:[b.root]},Object(a.j)(u,{key:t,path:t}))})}}]);
+//# sourceMappingURL=blog.cbc03e3f92261b82c5fb.bundle.js.map
