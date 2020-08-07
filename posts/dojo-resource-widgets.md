@@ -1,6 +1,6 @@
 ---
 title: Data Aware Widgets in Dojo
-date: 2020-07-02T12:00:00.000Z
+date: 2020-08-06T12:00:00.000Z
 author: Rene Rubalcava
 description: Dojo resource widgets allow you to make widgets data aware and share a single source of data!
 tags: javascript, dojo, webdev, dojo7, widgets
