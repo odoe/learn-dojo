@@ -33,5 +33,6 @@ blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"web-components-
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"build-movie-app-with-dojo.md"}]', 'runtime/block-047e91de66c854f13bd0')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"intersection-observer.md"}]', 'runtime/block-26b0092abceca69763f6')
 blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"intro-dojo-i18n.md"}]', 'runtime/block-8168b01ee3f0fb02b1d7')
+blockCacheEntry('src/blocks/compile-blog-post.block', '[{"path":"dojo-resource-widgets.md"}]', 'runtime/block-fe84cb07f085c75a4403')
 blockCacheEntry('src/blocks/compile-blog-index.block', '[{}]', 'runtime/block-c1325f13fa4400d4e34d')}}]);
 //# sourceMappingURL=blocks.6b989c4cd26037050dc3.bundle.js.map

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2020-07-31T16:09:47.552Z</updated>
+    <updated>2020-08-07T16:45:17.421Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -78,6 +78,19 @@
             <uri/>
         </author>
         <published>2019-07-14T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Data Aware Widgets in Dojo]]></title>
+        <id>https://learn-dojo.com/dojo-resource-widgets</id>
+        <link href="https://learn-dojo.com/dojo-resource-widgets"/>
+        <updated>2020-07-02T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dojo resource widgets allow you to make widgets data aware and share a single source of data!]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2020-07-02T12:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[Theming with Dojo Middleware]]></title>

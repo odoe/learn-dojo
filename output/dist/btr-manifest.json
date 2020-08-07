@@ -1,5 +1,6 @@
 [
     "",
+    "dojo-resource-widgets",
     "intro-dojo-i18n",
     "intersection-observer",
     "build-movie-app-with-dojo",
