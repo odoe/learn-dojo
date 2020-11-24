@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://learn-dojo.com</id>
     <title>Learn Dojo</title>
-    <updated>2020-08-07T16:56:42.394Z</updated>
+    <updated>2020-11-24T18:19:21.485Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Rene Rubalcava</name>
@@ -143,6 +143,19 @@
             <uri/>
         </author>
         <published>2019-12-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learn Dojo on Youtube]]></title>
+        <id>https://learn-dojo.com/learn-dojo-youtube</id>
+        <link href="https://learn-dojo.com/learn-dojo-youtube"/>
+        <updated>2020-11-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Building apps with Dojo on Youtube]]></summary>
+        <author>
+            <name>Rene Rubalcava</name>
+            <email/>
+            <uri/>
+        </author>
+        <published>2020-11-25T00:00:00.000Z</published>
     </entry>
     <entry>
         <title type="html"><![CDATA[Migrating learn-dojo to Dojo 6]]></title>

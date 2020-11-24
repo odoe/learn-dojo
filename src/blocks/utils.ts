@@ -31,8 +31,25 @@ export const toVNodes = (content: string) => {
 			'codesandbox.io': {
 				tag: 'iframe',
 				width: '100%',
-				height: 500
-			}
+				height: 500,
+			},
+		})
+		.use(remarkIframes, {
+			'www.youtube.com': {
+				tag: 'iframe',
+				width: 560,
+				height: 315,
+				disabled: false,
+				replace: [
+					['watch?v=', 'embed/'],
+					['http://', 'https://'],
+				],
+				thumbnail: {
+					format: 'http://img.youtube.com/vi/{id}/0.jpg',
+					id: '.+/(.+)$',
+				},
+				removeAfter: '&',
+			},
 		})
 		.use(frontmatter, 'yaml');
 
@@ -63,10 +80,7 @@ export const toVNodes = (content: string) => {
 
 // Gets yaml metadata from markdown
 export const getMetaData = (content: string) => {
-	const pipeline = unified()
-		.use(markdown, { commonmark: true })
-		.use(frontmatter, 'yaml')
-		.use(parseFrontmatter);
+	const pipeline = unified().use(markdown, { commonmark: true }).use(frontmatter, 'yaml').use(parseFrontmatter);
 
 	const nodes = pipeline.parse(content);
 	const result = pipeline.runSync(nodes);
