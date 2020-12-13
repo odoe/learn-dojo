@@ -1,10 +1,10 @@
 ---
 title: Learn Dojo on Youtube
-date: 2020-11-25
+date: 2020-12-14
 author: Rene Rubalcava
 description: Building apps with Dojo on Youtube
 tags: javascript, dojo, webdev, youtube
-cover_image: /assets/blog/image.jpg
+cover_image: /assets/blog/learn-dojo-yt.jpg
 published: true
 ---
 
